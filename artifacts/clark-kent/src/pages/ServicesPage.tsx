@@ -3,33 +3,27 @@ import { Link } from "wouter";
 const services = [
   {
     number: "01",
-    title: "Brand Strategy",
+    title: "Fractional Retainers",
     description:
-      "Positioning, messaging architecture, and brand identity systems built for growth-stage companies ready to scale.",
+      "For teams that want an embedded content strategist without a full time hire. I plug into your existing team on an ongoing basis, shaping the content strategy behind everything you ship, month over month.",
   },
   {
     number: "02",
-    title: "Creative Direction",
+    title: "Campaign Launch Support",
     description:
-      "Art direction, visual storytelling, and campaign concepting that makes your brand impossible to ignore.",
+      "For brands with a specific moment on the calendar. I build the strategy from concept through execution planning, including messaging, creative direction, and the roadmap your production team runs with, so the launch has a clear point of view from day one.",
   },
   {
     number: "03",
-    title: "Design Systems",
+    title: "Kickstart your Brand",
     description:
-      "Scalable, component-driven design languages — from typography and color to full UI libraries your team can own.",
+      "For early-stage brands who know they need a social strategy but don't know where to start. I come in with an intensive that gives you brand positioning and a 90-day roadmap built specifically for social, so you leave with a clear blueprint instead of a blank page.",
   },
   {
     number: "04",
-    title: "AI Integration",
+    title: "1:1 Consulting",
     description:
-      "Practical AI workflows woven into your creative and marketing process — faster output, higher signal.",
-  },
-  {
-    number: "05",
-    title: "Web & Digital",
-    description:
-      "High-performance websites, landing pages, and digital experiences that convert and feel worth sharing.",
+      "For teams working through a specific challenge, like a repositioning question, a campaign concept that isn't landing, or a strategy that needs a second set of eyes. We work together in focused sessions to get you unstuck and moving with a clear plan.",
   },
 ];
 
