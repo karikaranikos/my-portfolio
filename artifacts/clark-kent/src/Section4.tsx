@@ -11,14 +11,17 @@ export default function Section4() {
 
         {/* Right — text */}
         <div className="about-text-col">
-          <h2 className="about-heading">
-            BUILDING BRANDS<br />THAT MEAN<br />SOMETHING.
-          </h2>
           <p className="about-body">
-            I'm a creative strategist working at the intersection of brand, design, and growth. I help ambitious companies find their voice, sharpen their story, and show up in the world with clarity and conviction.
+            I'm Kari Karanikos, a content and creative strategist. I partner with brands to build the full arc of content strategy, from concept and creative direction through to execution planning, with past clients including Nike, Rothy's, AG1, and Malbon.
           </p>
           <p className="about-body">
-            With a background spanning art direction, digital product, and AI-assisted creative — I bring a rare combination of strategic thinking and hands-on execution to every engagement.
+            Based in New York City, I frequently work with teams in Los Angeles and Austin.
+          </p>
+          <p className="about-body">
+            I partner with brands in a freelance or fractional capacity, bringing content strategy, creative direction, and execution planning to teams that are ready to build at scale.
+          </p>
+          <p className="about-body">
+            To do my best work, I partner with growth-stage brands that have the budget to support large-scale content initiatives. That could mean an in-house production team ready to execute, or the resources to bring in the right creative partners. I build the strategy, and together we bring it to life.
           </p>
         </div>
       </div>
