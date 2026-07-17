@@ -4,19 +4,25 @@ import Section4 from "./Section4";
 import Footer from "./Footer";
 import WorkPage from "./pages/WorkPage";
 import ServicesPage from "./pages/ServicesPage";
+import { useScrollToHash } from "./hooks/use-scroll-to-hash";
+
+function HomePage() {
+  useScrollToHash();
+  return (
+    <>
+      <Works />
+      <Section4 />
+      <Footer />
+    </>
+  );
+}
 
 export default function App() {
   return (
     <Switch>
       <Route path="/work" component={WorkPage} />
       <Route path="/services" component={ServicesPage} />
-      <Route>
-        <>
-          <Works />
-          <Section4 />
-          <Footer />
-        </>
-      </Route>
+      <Route component={HomePage} />
     </Switch>
   );
 }
