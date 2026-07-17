@@ -183,7 +183,7 @@ export default function Works() {
           CREATIVE STRATEGY<br />FOR GROWTH-STAGE BRANDS.
         </h2>
         <nav className="works-nav">
-          <a href="#work" className="works-nav-link">Work</a>
+          <a href="/work" className="works-nav-link">Work</a>
           <a href="#services" className="works-nav-link">Services</a>
           <a href="#about" className="works-nav-link">About</a>
           <a href="#contact" className="works-nav-link">Contact</a>
