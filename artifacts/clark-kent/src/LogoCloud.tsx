@@ -42,10 +42,7 @@ const logos: LogoItem[] = [
   { file: "logo-19.png", left: 42, top: 11, dur: 6.0, delay: 1.9 },
   { file: "logo-20.png", left: 62, top: 24, dur: 8.0, delay: 3.6 },
 
-  // ── Slots 21-23 ─────────────────────────────────────────
-  { file: "logo-21.png", left: 70, top: 30, dur: 6.8, delay: 0.8 },
-  { file: "logo-22.png", left: 70, top: 65, dur: 5.6, delay: 2.3 },
-  { file: "logo-23.png", left: 36, top: 95, dur: 7.2, delay: 1.2 },
+  // logo-21, logo-22, logo-23 added once uploaded
 ];
 
 export default function LogoCloud() {
