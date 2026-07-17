@@ -23,7 +23,7 @@ const logos: LogoItem[] = [
 
   // ── Ring 2 ──────────────────────────────────────────────
   { file: "logo-07.png", left: 36, top: 36, dur: 8.0, delay: 0.6 },
-  { file: "logo-08.png", left: 58, top: 48, dur: 6.8, delay: 2.2 },
+  { file: "logo-08.png", left: 58, top: 34, dur: 6.8, delay: 2.2 },
   { file: "logo-09.png", left: 50, top: 68, dur: 5.6, delay: 0.9 },
   { file: "logo-10.png", left: 31, top: 73, dur: 7.4, delay: 2.7 },
   { file: "logo-11.png", left: 16, top: 59, dur: 6.2, delay: 1.4 },
