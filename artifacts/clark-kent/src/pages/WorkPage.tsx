@@ -21,7 +21,7 @@ export default function WorkPage() {
       <header className="work-page-header">
         <Link href="/" className="work-page-back">← Back</Link>
         <nav className="work-page-nav">
-          <a href="#" className="work-page-nav-link">Services</a>
+          <Link href="/services" className="work-page-nav-link">Services</Link>
           <a href="#" className="work-page-nav-link">About</a>
           <a href="#contact" className="work-page-nav-link">Contact</a>
         </nav>
