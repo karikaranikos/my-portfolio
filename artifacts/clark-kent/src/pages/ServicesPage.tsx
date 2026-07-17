@@ -49,12 +49,13 @@ export default function ServicesPage() {
       <div className="services-list">
         {services.map((service, i) => (
           <div key={i} className="services-item">
-            <span className="services-item-number">{service.number}</span>
-            <div className="services-item-body">
+            <div className="services-item-left">
+              <span className="services-item-number">{service.number}</span>
               <h2 className="services-item-title">{service.title}</h2>
+            </div>
+            <div className="services-item-right">
               <p className="services-item-description">{service.description}</p>
             </div>
-            <span className="services-item-arrow">→</span>
           </div>
         ))}
       </div>
