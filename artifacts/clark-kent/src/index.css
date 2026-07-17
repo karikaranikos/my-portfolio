@@ -729,6 +729,8 @@ body {
   animation-direction: alternate;
   will-change: transform;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 @keyframes logo-float {
