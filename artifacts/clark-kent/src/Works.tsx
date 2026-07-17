@@ -180,7 +180,7 @@ export default function Works() {
     >
       <div className="works-text-block">
         <h2 className="works-heading">
-          WHERE IDEAS<br />BECOME REALITY.
+          CREATIVE STRATEGY<br />FOR GROWTH-STAGE BRANDS.
         </h2>
         <p className="works-tagline">
           A curated selection of projects across<br />
