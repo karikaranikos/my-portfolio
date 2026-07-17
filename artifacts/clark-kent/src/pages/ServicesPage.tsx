@@ -41,8 +41,8 @@ export default function ServicesPage() {
         <Link href="/" className="work-page-back">← Back</Link>
         <nav className="work-page-nav">
           <Link href="/work" className="work-page-nav-link">Work</Link>
-          <a href="#" className="work-page-nav-link">About</a>
-          <Link href="/#contact" className="work-page-nav-link">Contact</Link>
+          <a href="/#about" className="work-page-nav-link">About</a>
+          <a href="/#contact" className="work-page-nav-link">Contact</a>
         </nav>
       </header>
 

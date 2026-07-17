@@ -197,6 +197,7 @@ export default function Section4() {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="section4"
       style={{
