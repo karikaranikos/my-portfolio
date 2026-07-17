@@ -1,18 +1,18 @@
 import { Link } from "wouter";
 
 const projects = [
-  { id: 1,  img: "W1.png",  title: "Hampton",            category: "" },
-  { id: 2,  img: "W2.png",  title: "Malbon",             category: "" },
-  { id: 3,  img: "W3.png",  title: "Malbon Buckets Club",category: "" },
-  { id: 4,  img: "W4.png",  title: "AG1",                category: "" },
-  { id: 5,  img: "W5.png",  title: "Aje.",               category: "" },
-  { id: 6,  img: "W6.png",  title: "Real American Beer", category: "" },
-  { id: 7,  img: "W7.png",  title: "TYR",                category: "" },
-  { id: 8,  img: "W8.png",  title: "Nike Swim",          category: "" },
-  { id: 9,  img: "W9.png",  title: "High Pour",          category: "" },
-  { id: 10, img: "W10.png", title: "Lady Bird Soda",     category: "" },
-  { id: 11, img: "W11.png", title: "CRAFTD",             category: "" },
-  { id: 12, img: "W12.png", title: "APL",                category: "" },
+  { id: 1,  img: "WP1.png",  title: "Hampton",            category: "" },
+  { id: 2,  img: "WP2.png",  title: "Malbon",             category: "" },
+  { id: 3,  img: "WP3.png",  title: "Malbon Buckets Club",category: "" },
+  { id: 4,  img: "WP4.png",  title: "AG1",                category: "" },
+  { id: 5,  img: "WP5.png",  title: "Aje.",               category: "" },
+  { id: 6,  img: "WP6.png",  title: "Real American Beer", category: "" },
+  { id: 7,  img: "WP7.png",  title: "TYR",                category: "" },
+  { id: 8,  img: "WP8.png",  title: "Nike Swim",          category: "" },
+  { id: 9,  img: "WP9.png",  title: "High Pour",          category: "" },
+  { id: 10, img: "WP10.png", title: "Lady Bird Soda",     category: "" },
+  { id: 11, img: "WP11.png", title: "CRAFTD",             category: "" },
+  { id: 12, img: "WP12.png", title: "APL",                category: "" },
 ];
 
 const base = import.meta.env.BASE_URL || "/";
