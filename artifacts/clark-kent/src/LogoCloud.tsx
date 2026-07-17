@@ -39,7 +39,12 @@ const logos: LogoItem[] = [
   { file: "logo-19.png", left:  4, top: 61, dur: 8.4, delay: 1.6 },
   { file: "logo-20.png", left:  4, top: 35, dur: 5.0, delay: 2.9 },
 
-  // logo-21, logo-22, logo-23 added once uploaded
+  // ── New logos (21–25) ───────────────────────────────────
+  { file: "logo-21.png", left: 19, top: 15, dur: 7.6, delay: 0.4 },
+  { file: "logo-22.png", left: 42, top: 11, dur: 6.0, delay: 1.9 },
+  { file: "logo-23.png", left: 62, top: 24, dur: 8.0, delay: 3.6 },
+  { file: "logo-24.png", left: 74, top: 62, dur: 6.6, delay: 1.3 },
+  { file: "logo-25.png", left: 74, top: 34, dur: 7.4, delay: 2.8 },
 ];
 
 export default function LogoCloud() {
