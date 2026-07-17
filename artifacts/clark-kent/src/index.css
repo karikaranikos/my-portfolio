@@ -334,7 +334,7 @@ body {
 .about-inner {
   display: flex;
   gap: 80px;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
