@@ -296,24 +296,28 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 0;
+  padding: 80px 48px;
   box-sizing: border-box;
 }
 
 .about-inner {
   display: flex;
-  gap: 0;
-  align-items: center;
+  gap: 80px;
+  align-items: stretch;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .about-image-col {
-  flex: 0 0 70%;
+  flex: 0 0 380px;
 }
 
 .about-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
 }
 
@@ -322,7 +326,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 0 32px;
+  padding-top: 16px;
 }
 
 .about-heading {
