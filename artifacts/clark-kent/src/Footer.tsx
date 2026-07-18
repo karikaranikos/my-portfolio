@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p className="footer-copy">© Clark Kent 2026</p>
+          <p className="footer-copy">© Kari Karanikos 2026</p>
           <div className="footer-socials">
             <a href="https://www.linkedin.com/in/zakaria-karanikos/" target="_blank" rel="noopener noreferrer" className="footer-social-link">LinkedIn</a>
           </div>
