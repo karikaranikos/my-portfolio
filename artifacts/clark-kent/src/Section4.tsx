@@ -4,7 +4,9 @@ export default function Section4() {
       <div className="about-inner">
         {/* Left — profile picture */}
         <div className="about-image-col">
-          <img src="/kari-profile.png" alt="Kari Karanikos" className="about-image" />
+          <div className="about-image-placeholder">
+            <span className="about-image-label">Profile Photo</span>
+          </div>
         </div>
 
         {/* Right — text */}
