@@ -11,7 +11,7 @@ export default function Section4() {
         <div className="about-text-col">
           <h2 className="about-heading">ABOUT</h2>
           <p className="about-body">
-            I'm Kari Karanikos, a content and creative strategist. I partner with brands to build the full arc of content strategy, from concept and creative direction through to execution planning, with past clients including Nike, Rothy's, AG1, and Malbon.
+            I'm Kari, a content and creative strategist. I partner with brands to build the full arc of content strategy, from concept and creative direction through to execution planning, with past clients including Nike, Rothy's, AG1, and Malbon.
           </p>
           <p className="about-body">
             Based in New York City, I frequently work with teams in Los Angeles and Austin.
