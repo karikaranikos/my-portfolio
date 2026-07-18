@@ -311,11 +311,15 @@ body {
 
 .about-image-col {
   flex: 0 0 58%;
+  align-self: stretch;
+  overflow: hidden;
 }
 
 .about-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
