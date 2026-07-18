@@ -3,6 +3,7 @@ export interface Project {
   slug: string;
   title: string;
   img: string;       // portrait (WP) used on /work grid
+  cover?: string;    // optional custom cover for the detail page
   category: string;
 }
 
@@ -16,7 +17,7 @@ export const projects: Project[] = [
   { id: 7,  slug: "tyr",                title: "TYR",                 img: "WP7.png",  category: "" },
   { id: 8,  slug: "nike-swim",          title: "Nike Swim",           img: "WP8.png",  category: "" },
   { id: 9,  slug: "high-pour",          title: "High Pour",           img: "WP9.png",  category: "" },
-  { id: 10, slug: "lady-bird-soda",     title: "Lady Bird Soda",      img: "WP10.png", category: "" },
+  { id: 10, slug: "lady-bird-soda",     title: "Lady Bird Soda",      img: "WP10.png", cover: "cover-lady-bird-soda.png", category: "" },
   { id: 11, slug: "craftd",             title: "CRAFTD",              img: "WP11.png", category: "" },
   { id: 12, slug: "apl",                title: "APL",                 img: "WP12.png", category: "" },
 ];

@@ -43,7 +43,7 @@ export default function WorkDetailPage() {
 
       {/* Cover image */}
       <div className="work-detail-cover">
-        <img src={`${base}${project.img}`} alt={project.title} />
+        <img src={`${base}${project.cover ?? project.img}`} alt={project.title} />
       </div>
 
       {/* Content — placeholder, ready to fill in */}
