@@ -2,6 +2,11 @@ export default function Section4() {
   return (
     <section id="about" className="about-section">
       <div className="about-inner">
+        {/* Left — profile picture */}
+        <div className="about-image-col">
+          <img src="/kari-profile.png" alt="Kari Karanikos" className="about-image" />
+        </div>
+
         {/* Right — text */}
         <div className="about-text-col">
           <h2 className="about-heading">ABOUT</h2>
