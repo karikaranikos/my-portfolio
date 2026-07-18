@@ -492,7 +492,7 @@ body {
 }
 
 .services-list {
-  padding: 0 48px 120px;
+  padding: 0 48px 0;
 }
 
 .services-item {
@@ -549,7 +549,7 @@ body {
 
 /* ── Services Interlude ─────────────────────────────────────── */
 .services-interlude {
-  padding: 64px 48px;
+  padding: 32px 48px;
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
