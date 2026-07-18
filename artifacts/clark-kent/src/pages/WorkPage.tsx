@@ -21,6 +21,11 @@ export default function WorkPage() {
         <h1 className="work-page-title">WORK</h1>
       </div>
 
+      {/* Intro text */}
+      <div className="work-page-intro">
+        <p>I've worked across a variety of brands and industries, but these are my favorite and most impactful projects.</p>
+      </div>
+
       {/* Grid */}
       <div className="work-page-grid">
         {projects.map((project) => (
