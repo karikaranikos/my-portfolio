@@ -1,19 +1,5 @@
 import { Link } from "wouter";
-
-const projects = [
-  { id: 1,  img: "WP1.png",  title: "Hampton",            category: "" },
-  { id: 2,  img: "WP2.png",  title: "Malbon",             category: "" },
-  { id: 3,  img: "WP3.png",  title: "Malbon Buckets Club",category: "" },
-  { id: 4,  img: "WP4.png",  title: "AG1",                category: "" },
-  { id: 5,  img: "WP5.png",  title: "Aje.",               category: "" },
-  { id: 6,  img: "WP6.png",  title: "Real American Beer", category: "" },
-  { id: 7,  img: "WP7.png",  title: "TYR",                category: "" },
-  { id: 8,  img: "WP8.png",  title: "Nike Swim",          category: "" },
-  { id: 9,  img: "WP9.png",  title: "High Pour",          category: "" },
-  { id: 10, img: "WP10.png", title: "Lady Bird Soda",     category: "" },
-  { id: 11, img: "WP11.png", title: "CRAFTD",             category: "" },
-  { id: 12, img: "WP12.png", title: "APL",                category: "" },
-];
+import { projects } from "../data/projects";
 
 const base = import.meta.env.BASE_URL || "/";
 
@@ -38,7 +24,7 @@ export default function WorkPage() {
       {/* Grid */}
       <div className="work-page-grid">
         {projects.map((project) => (
-          <div key={project.id} className="work-page-item">
+          <Link key={project.id} href={`/work/${project.slug}`} className="work-page-item">
             <div className="work-page-item-image">
               <img
                 src={`${base}${project.img}`}
@@ -49,7 +35,7 @@ export default function WorkPage() {
               <span className="work-page-item-category">{project.category}</span>
               <h3 className="work-page-item-title">{project.title}</h3>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

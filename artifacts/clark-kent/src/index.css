@@ -467,6 +467,156 @@ body {
   text-transform: uppercase;
 }
 
+/* ── Work Detail Page ───────────────────────────────────────── */
+.work-detail-page {
+  background: #fff;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.work-detail-hero {
+  padding: 60px 48px 40px;
+}
+
+.work-detail-title {
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #111;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.work-detail-cover {
+  padding: 0 48px;
+  margin-bottom: 80px;
+}
+
+.work-detail-cover img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+
+.work-detail-content {
+  padding: 0 48px 80px;
+}
+
+.work-detail-intro {
+  display: flex;
+  gap: 0;
+  margin-bottom: 80px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.work-detail-intro-left {
+  flex: 0 0 40%;
+}
+
+.work-detail-intro-right {
+  flex: 1;
+  max-width: 520px;
+}
+
+.work-detail-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.35);
+  margin: 0;
+  padding-top: 4px;
+}
+
+.work-detail-body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(0,0,0,0.6);
+  margin: 0;
+}
+
+.work-detail-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.work-detail-media-placeholder {
+  background: #f0ece8;
+  aspect-ratio: 4/5;
+  width: 100%;
+}
+
+/* ── Work Detail Prev / Next Nav ────────────────────────────── */
+.work-detail-nav {
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.work-detail-nav-item {
+  flex: 1;
+  padding: 48px;
+}
+
+.work-detail-nav-item--right {
+  text-align: right;
+}
+
+.work-detail-nav-divider {
+  width: 1px;
+  background: rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+.work-detail-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-decoration: none;
+  color: #111;
+  transition: opacity 0.2s ease;
+}
+
+.work-detail-nav-link:hover {
+  opacity: 0.5;
+}
+
+.work-detail-nav-next {
+  align-items: flex-end;
+}
+
+.work-detail-nav-dir {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.35);
+}
+
+.work-detail-nav-name {
+  font-size: clamp(20px, 3vw, 36px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.work-detail-nav-thumb {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin-top: 12px;
+}
+
+.work-detail-nav-next .work-detail-nav-thumb {
+  margin-left: auto;
+}
+
 /* ── Services Page ──────────────────────────────────────────── */
 .services-page {
   background: #fff;
