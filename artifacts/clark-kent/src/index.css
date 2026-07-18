@@ -296,28 +296,25 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 48px;
+  padding: 80px 0;
   box-sizing: border-box;
 }
 
 .about-inner {
   display: flex;
-  gap: 80px;
-  align-items: stretch;
+  gap: 0;
+  align-items: center;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 .about-image-col {
-  flex: 0 0 58%;
+  flex: 0 0 70%;
 }
 
 .about-image {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
 }
 
 .about-text-col {
@@ -325,7 +322,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding-top: 16px;
+  padding: 0 32px;
 }
 
 .about-heading {
