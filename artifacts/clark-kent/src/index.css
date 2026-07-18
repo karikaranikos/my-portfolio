@@ -310,15 +310,14 @@ body {
 }
 
 .about-image-col {
-  flex: 0 0 380px;
+  flex: 0 0 58%;
 }
 
 .about-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
   display: block;
+  object-fit: contain;
 }
 
 .about-text-col {
