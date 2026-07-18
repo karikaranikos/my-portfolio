@@ -17,7 +17,7 @@ export default function Section4() {
             Based in New York City, I frequently work with teams in Los Angeles and Austin.
           </p>
           <p className="about-body">
-            I partner with brands in a freelance or fractional capacity, bringing content strategy, creative direction, and execution planning to teams that are ready to build at scale.
+            I collaborate with brands in a freelance or fractional capacity, bringing content strategy, creative direction, and execution planning to teams that are ready to build at scale.
           </p>
           <p className="about-body">
             To do my best work, I partner with growth-stage brands that have the budget to support large-scale content initiatives. That could mean an in-house production team ready to execute, or the resources to bring in the right creative partners. I build the strategy, and together we bring it to life.
