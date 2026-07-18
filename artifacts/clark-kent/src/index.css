@@ -547,6 +547,22 @@ body {
   margin: 0;
 }
 
+/* ── Services Interlude ─────────────────────────────────────── */
+.services-interlude {
+  padding: 64px 48px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.services-interlude p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.55);
+  margin: 0 auto;
+  max-width: 480px;
+}
+
 /* ── Services CTA Block ─────────────────────────────────────── */
 .services-cta {
   display: flex;

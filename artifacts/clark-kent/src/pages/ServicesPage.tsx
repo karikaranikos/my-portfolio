@@ -60,6 +60,11 @@ export default function ServicesPage() {
         ))}
       </div>
 
+      {/* Interlude text */}
+      <div className="services-interlude">
+        <p>Have something else in mind? I'm always open to a new project or challenge. Let's chat!</p>
+      </div>
+
       {/* CTA Block */}
       <div className="services-cta">
         <div className="services-cta-left">
