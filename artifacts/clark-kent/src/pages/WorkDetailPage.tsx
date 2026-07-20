@@ -67,23 +67,27 @@ export default function WorkDetailPage() {
 
         {/* Media grid */}
         <div className="work-detail-media-grid">
-          {Array.from({ length: 6 }).map((_, i) => {
-            const slot = project.mediaGrid?.[i];
-            if (slot && slot.images.length > 0) {
+          {(project.mediaGrid ?? Array(6).fill(null)).map((slot, i) => {
+            const rowSpan = slot?.rowSpan ?? 1;
+            const style: React.CSSProperties = rowSpan > 1 ? { gridRow: `span ${rowSpan}` } : {};
+
+            if (slot?.images && slot.images.length > 0) {
               return (
-                <div key={i} className="work-detail-media-slot">
+                <div key={i} className="work-detail-media-slot" style={style}>
                   {slot.images.map((src, j) => (
-                    <img
-                      key={j}
-                      src={`${base}${src}`}
-                      alt=""
-                      className="work-detail-media-img"
-                    />
+                    <img key={j} src={`${base}${src}`} alt="" className="work-detail-media-img" />
                   ))}
                 </div>
               );
             }
-            return <div key={i} className="work-detail-media-placeholder" />;
+            const ar = slot?.aspectRatio ?? "4/5";
+            return (
+              <div
+                key={i}
+                className="work-detail-media-placeholder"
+                style={{ ...style, aspectRatio: ar }}
+              />
+            );
           })}
         </div>
       </div>
