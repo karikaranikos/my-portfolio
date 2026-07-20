@@ -9,7 +9,7 @@ export interface Project {
 
 export const projects: Project[] = [
   { id: 1,  slug: "hampton",            title: "Hampton",             img: "WP1.png",  category: "" },
-  { id: 2,  slug: "malbon",             title: "Malbon",              img: "WP2.png",  category: "" },
+  { id: 2,  slug: "malbon",             title: "Malbon",              img: "WP2.png",  cover: "cover-malbon.png", category: "" },
   { id: 3,  slug: "malbon-buckets-club",title: "Malbon Buckets Club", img: "WP3.png",  category: "" },
   { id: 4,  slug: "ag1",                title: "AG1",                 img: "WP4.png",  category: "" },
   { id: 5,  slug: "aje",                title: "Aje.",                img: "WP5.png",  category: "" },
