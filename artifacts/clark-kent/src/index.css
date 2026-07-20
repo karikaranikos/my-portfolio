@@ -528,6 +528,8 @@ body {
 
 .work-detail-intro-left {
   flex: 0 0 40%;
+  display: flex;
+  align-items: center;
 }
 
 .work-detail-intro-right {
