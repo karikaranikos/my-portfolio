@@ -53,9 +53,15 @@ export default function WorkDetailPage() {
             <h2 className="work-detail-section-label">Overview</h2>
           </div>
           <div className="work-detail-intro-right">
-            <p className="work-detail-body">
-              This is where you'll describe what you did for {project.title} — the strategy, the story, and the impact. Add your copy here whenever you're ready.
-            </p>
+            {project.overview ? (
+              project.overview.split("\n\n").map((para, i) => (
+                <p key={i} className="work-detail-body">{para}</p>
+              ))
+            ) : (
+              <p className="work-detail-body">
+                This is where you'll describe what you did for {project.title} — the strategy, the story, and the impact. Add your copy here whenever you're ready.
+              </p>
+            )}
           </div>
         </div>
 

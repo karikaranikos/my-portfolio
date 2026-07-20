@@ -5,10 +5,13 @@ export interface Project {
   img: string;       // portrait (WP) used on /work grid
   cover?: string;    // optional custom cover for the detail page
   category: string;
+  overview?: string; // case study body copy
 }
 
 export const projects: Project[] = [
-  { id: 1,  slug: "hampton",            title: "Hampton",             img: "WP1.png",  cover: "cover-hampton.png",            category: "" },
+  { id: 1,  slug: "hampton",            title: "Hampton",             img: "WP1.png",  cover: "cover-hampton.png",            category: "",
+    overview: `I worked with Hampton, a private community for founders doing $3M+ in ARR, founded by Sam Parr and his partner Joe Speiser. I served as co-creative strategist and copywriter, tasked with launching Hampton's presence on Instagram and building a library of paid creative behind the scenes. The challenge was establishing Sam's authority and presence online with no existing Instagram audience.\n\nOur approach was to build a tiered content system instead of a one-off campaign: a hero storytelling series centered around Sam & Joe's success to build emotional credibility, a second layer pulling educational lessons from Sam and Joe into bite-sized content, and a third layer of highly shareable content designed to travel through founders' networks. Rather than building around Sam alone, every series, topic, and visual style was designed to be repeatable and applicable across other members of the community — so the content system could scale across the entire Hampton ecosystem, not just one founder's story.\n\nOnce content was in production, I also owned the client and post-production workflow, keeping execution aligned with strategy through final cut. The biggest win was Sam's hero piece becoming their top performing ad for 4 months.`,
+  },
   { id: 2,  slug: "malbon",             title: "Malbon",              img: "WP2.png",  cover: "cover-malbon.png",             category: "" },
   { id: 3,  slug: "malbon-buckets-club",title: "Malbon Buckets Club", img: "WP3.png",  cover: "cover-malbon-buckets-club.png",category: "" },
   { id: 4,  slug: "ag1",                title: "AG1",                 img: "WP4.png",  cover: "cover-ag1.png",                category: "" },
