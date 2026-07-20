@@ -70,6 +70,9 @@ export default function WorkDetailPage() {
           <div className="work-detail-media-placeholder" />
           <div className="work-detail-media-placeholder" />
           <div className="work-detail-media-placeholder" />
+          <div className="work-detail-media-placeholder" />
+          <div className="work-detail-media-placeholder" />
+          <div className="work-detail-media-placeholder" />
         </div>
       </div>
 
