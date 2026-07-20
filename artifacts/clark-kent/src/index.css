@@ -583,6 +583,18 @@ body {
   width: 100%;
 }
 
+.work-detail-media-slot {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.work-detail-media-slot .work-detail-media-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* ── Work Detail Prev / Next Nav ────────────────────────────── */
 .work-detail-nav {
   display: flex;

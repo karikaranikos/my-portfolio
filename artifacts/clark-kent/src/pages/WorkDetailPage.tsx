@@ -65,14 +65,26 @@ export default function WorkDetailPage() {
           </div>
         </div>
 
-        {/* Media grid — placeholder slots */}
+        {/* Media grid */}
         <div className="work-detail-media-grid">
-          <div className="work-detail-media-placeholder" />
-          <div className="work-detail-media-placeholder" />
-          <div className="work-detail-media-placeholder" />
-          <div className="work-detail-media-placeholder" />
-          <div className="work-detail-media-placeholder" />
-          <div className="work-detail-media-placeholder" />
+          {Array.from({ length: 6 }).map((_, i) => {
+            const slot = project.mediaGrid?.[i];
+            if (slot && slot.images.length > 0) {
+              return (
+                <div key={i} className="work-detail-media-slot">
+                  {slot.images.map((src, j) => (
+                    <img
+                      key={j}
+                      src={`${base}${src}`}
+                      alt=""
+                      className="work-detail-media-img"
+                    />
+                  ))}
+                </div>
+              );
+            }
+            return <div key={i} className="work-detail-media-placeholder" />;
+          })}
         </div>
       </div>
 
