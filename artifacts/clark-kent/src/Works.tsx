@@ -1,10 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { projects } from "./data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const base = import.meta.env.BASE_URL || "/";
+
+const slugMap: Record<string, string> = Object.fromEntries(
+  projects.map((p) => [p.title, p.slug])
+);
 
 const worksData = [
   { id: 1,  img: "W1.png",  title: "Hampton" },
@@ -204,14 +209,17 @@ export default function Works() {
         }}
       >
         {domItems.map((item) => (
-          <div
+          <a
             key={item.id}
+            href={`/work/${slugMap[item.title] ?? ""}`}
             className={`works-item works-item--${item.id}`}
             style={{
               overflow: "hidden",
               position: "absolute",
               bottom: 0,
               left: 0,
+              display: "block",
+              cursor: "pointer",
             }}
           >
             <img
@@ -225,7 +233,7 @@ export default function Works() {
                 display: "block",
               }}
             />
-          </div>
+          </a>
         ))}
       </div>
     </section>
