@@ -555,6 +555,22 @@ body {
   margin: 0;
 }
 
+.work-detail-body + .work-detail-body {
+  margin-top: 20px;
+}
+
+.work-detail-body a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,0.25);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.work-detail-body a:hover {
+  text-decoration-color: rgba(0,0,0,0.6);
+}
+
 .work-detail-media-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

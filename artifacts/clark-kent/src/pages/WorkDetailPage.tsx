@@ -55,7 +55,7 @@ export default function WorkDetailPage() {
           <div className="work-detail-intro-right">
             {project.overview ? (
               project.overview.split("\n\n").map((para, i) => (
-                <p key={i} className="work-detail-body">{para}</p>
+                <p key={i} className="work-detail-body" dangerouslySetInnerHTML={{ __html: para }} />
               ))
             ) : (
               <p className="work-detail-body">
