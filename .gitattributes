@@ -29,3 +29,4 @@ artifacts/clark-kent/public/aje-gallerist-ep1.mp4 filter=lfs diff=lfs merge=lfs 
 artifacts/clark-kent/public/aje-gallerist-ep4.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/EPISODE_1_V4_1784612811505.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/EPISODE_4_V4_1784612921840.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/Aje_Studio_Trailer_V2_1784613242411.mp4 filter=lfs diff=lfs merge=lfs -text
