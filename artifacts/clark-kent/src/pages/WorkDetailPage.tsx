@@ -99,7 +99,6 @@ export default function WorkDetailPage() {
             <Link href={`/work/${prev.slug}`} className="work-detail-nav-link work-detail-nav-prev">
               <span className="work-detail-nav-dir">← Previous</span>
               <span className="work-detail-nav-name">{prev.title}</span>
-              <img src={`${base}${prev.img}`} alt={prev.title} className="work-detail-nav-thumb" />
             </Link>
           ) : <div />}
         </div>
@@ -109,7 +108,6 @@ export default function WorkDetailPage() {
             <Link href={`/work/${next.slug}`} className="work-detail-nav-link work-detail-nav-next">
               <span className="work-detail-nav-dir">Next →</span>
               <span className="work-detail-nav-name">{next.title}</span>
-              <img src={`${base}${next.img}`} alt={next.title} className="work-detail-nav-thumb" />
             </Link>
           ) : <div />}
         </div>
