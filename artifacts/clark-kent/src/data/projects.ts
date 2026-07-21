@@ -5,6 +5,11 @@ export interface MediaSlot {
   aspectRatio?: string;   // placeholder aspect ratio override (default "4/5")
 }
 
+export interface MediaRow {
+  columns: number;
+  slots: (MediaSlot | null)[];
+}
+
 export interface Project {
   id: number;
   slug: string;
@@ -15,7 +20,8 @@ export interface Project {
   overview?: string; // case study body copy
   headerVideo?: string;              // optional full-width horizontal video above the media grid
   mediaGridColumns?: number;          // columns in the media grid (default 3)
-  mediaGrid?: (MediaSlot | null)[];  // 6 slots, null = placeholder
+  mediaGrid?: (MediaSlot | null)[];  // flat grid, null = placeholder
+  mediaRows?: MediaRow[];            // per-row grids, each with its own column count
   commentImages?: string[];          // optional screenshots shown side-by-side below media grid
 }
 
@@ -45,20 +51,23 @@ export const projects: Project[] = [
     overview: `I created and led the creative strategy, copywriting, and on-site production for the launch of <a href="https://www.instagram.com/malbonhome/" target="_blank" rel="noopener noreferrer">Malbon Home</a> at the 2026 Masters — Malbon's four-day activation in Augusta. Malbon's brand equity goal was to create an activation where everyone was welcome, in a space where brand activations historically are invite-only and exclusive.\n\nThe brief: grow to 10K followers in 4 days, shoot, edit + post in real time, without losing Malbon's premium positioning — while weaving in brand partners, celebrity guests, and everyday community members equally, all in service of their core narrative: "the green is the common ground." Easy, right?\n\nThat meant building a content strategy versatile enough to cover VIP guests like <a href="https://www.instagram.com/charley.hull/?hl=en" target="_blank" rel="noopener noreferrer">Charlie Hull</a>, <a href="https://www.instagram.com/dwyanewade/?hl=en" target="_blank" rel="noopener noreferrer">Dwyane Wade</a>, <a href="https://www.instagram.com/teamswish/?hl=en" target="_blank" rel="noopener noreferrer">J.R. Smith</a>, <a href="https://www.instagram.com/groovyq/?hl=en" target="_blank" rel="noopener noreferrer">Schoolboy Q</a>, and <a href="https://www.instagram.com/victorcruz/" target="_blank" rel="noopener noreferrer">Victor Cruz</a>, everyday community members walking through the door, and dedicated branded content for partners like Nespresso, LALO Tequila, Tito's, and Garage Beer.\n\nI built the strategy around "sets": treating each space in the house as its own mini content series, then assigning a team member to each set to execute concepts on the spot. One set became our viral <a href="https://www.instagram.com/reels/DW624PsEfXy/" target="_blank" rel="noopener noreferrer">"Letters From Augusta"</a> series, where an Etsy payphone at the front door prompted guests to call whoever introduced them to golf — we shot 25 episodes in a single day and gained over 1.3M views.\n\nI led a team of 8, posting around 300 pieces of content over the activation, generating 7M organic views and growing the account from 0 to 15K followers in 5 days. The approach was later cited as a model by marketing newsletter <a href="https://www.linkinbio.news/p/your-campaign-needs-more-on-ramps" target="_blank" rel="noopener noreferrer">Link in Bio</a>, for building modern campaigns that work with non-chronological social algorithms.`,
   },
   { id: 3,  slug: "malbon-buckets-club",title: "Malbon Buckets Club", img: "WP3.png",  cover: "cover-malbon-buckets-club.png",category: "",
-    mediaGridColumns: 4,
-    mediaGrid: [
-      { video: "buckets-malbon-vs.mp4",     aspectRatio: "9/16" },
-      { video: "buckets-sonder.mp4",        aspectRatio: "9/16" },
-      { video: "buckets-stephen.mp4",       aspectRatio: "9/16" },
-      null,
-      { video: "buckets-road-ep1.mp4",      aspectRatio: "9/16" },
-      { video: "buckets-road-ep2.mp4",      aspectRatio: "9/16" },
-      { video: "buckets-road-schoolboy.mp4", aspectRatio: "9/16" },
-      null,
-      { video: "buckets-fella1-a.mp4", aspectRatio: "4/5" },
-      { video: "buckets-fella1-b.mp4", aspectRatio: "4/5" },
-      { video: "buckets-fella2-a.mp4", aspectRatio: "4/5" },
-      { video: "buckets-fella2-b.mp4", aspectRatio: "4/5" },
+    mediaRows: [
+      { columns: 3, slots: [
+        { video: "buckets-malbon-vs.mp4",      aspectRatio: "9/16" },
+        { video: "buckets-sonder.mp4",         aspectRatio: "9/16" },
+        { video: "buckets-stephen.mp4",        aspectRatio: "9/16" },
+      ]},
+      { columns: 3, slots: [
+        { video: "buckets-road-ep1.mp4",       aspectRatio: "9/16" },
+        { video: "buckets-road-ep2.mp4",       aspectRatio: "9/16" },
+        { video: "buckets-road-schoolboy.mp4", aspectRatio: "9/16" },
+      ]},
+      { columns: 4, slots: [
+        { video: "buckets-fella1-a.mp4", aspectRatio: "4/5" },
+        { video: "buckets-fella1-b.mp4", aspectRatio: "4/5" },
+        { video: "buckets-fella2-a.mp4", aspectRatio: "4/5" },
+        { video: "buckets-fella2-b.mp4", aspectRatio: "4/5" },
+      ]},
     ],
     overview: `I built the creative strategy, production planning, on-site creative direction, and copywriting for <a href="https://www.instagram.com/malbon/" target="_blank" rel="noopener noreferrer">Malbon</a>'s <a href="https://www.instagram.com/buckets.club/reels/" target="_blank" rel="noopener noreferrer">Buckets Cup Tournament</a>, a series of one-day golf tournaments held at bucket-list locations across the US, open to pros and amateurs alike. The ask was to balance real storytelling with genuine competitive edge, all in service of Malbon's "the green is the common ground" narrative.\n\nThe challenge was covering a fast-moving, single-day event happening across multiple sets on the golf course with a mix of pros, amateurs, and celebrity guests, all with a team of 6 and an 8-hour shoot window, producing 15 to 25+ pieces of content that same day, shot, edited, and posted live.\n\nI built a "sets" strategy tailored to a moving event. This meant working backwards from the people, brand partners, and moments we wanted to highlight, then building mini sets, some stationary and some moving with talent as they competed across the course. Guests included <a href="https://www.instagram.com/groovyq/?hl=en" target="_blank" rel="noopener noreferrer">Schoolboy Q</a> and <a href="https://www.instagram.com/victorcruz/" target="_blank" rel="noopener noreferrer">Victor Cruz</a>.\n\nThe bigger challenge sat outside of shoot day. With only one tournament per month, the account needed momentum through the roughly 25 days between events. I built a pre-production plan for each tournament designed to capture enough footage to sustain an ongoing storytelling arc, using serialized content that carried through the gaps and kept the account active between tournaments rather than going dark until the next event.\n\nAcross 4 tournaments over 4 months, we produced 35+ pieces of content per event, grew the account by 8,000 followers, and generated 1.8M+ views.`,
   },

@@ -1,7 +1,44 @@
 import { Link, useParams } from "wouter";
-import { projects } from "../data/projects";
+import { projects, MediaSlot } from "../data/projects";
 
 const base = import.meta.env.BASE_URL || "/";
+
+function renderSlot(slot: MediaSlot | null, i: number, base: string) {
+  const rowSpan = slot?.rowSpan ?? 1;
+  const style: React.CSSProperties = rowSpan > 1 ? { gridRow: `span ${rowSpan}` } : {};
+
+  if (slot?.images && slot.images.length > 0) {
+    return (
+      <div key={i} className="work-detail-media-slot" style={style}>
+        {slot.images.map((src, j) => (
+          <img key={j} src={`${base}${src}`} alt="" className="work-detail-media-img" />
+        ))}
+      </div>
+    );
+  }
+  if (slot?.video) {
+    const ar = slot.aspectRatio ?? "9/16";
+    return (
+      <div key={i} className="work-detail-media-slot" style={{ ...style, aspectRatio: ar }}>
+        <video
+          src={`${base}${slot.video}`}
+          className="work-detail-media-video"
+          controls
+          playsInline
+          preload="metadata"
+        />
+      </div>
+    );
+  }
+  const ar = slot?.aspectRatio ?? "4/5";
+  return (
+    <div
+      key={i}
+      className="work-detail-media-placeholder"
+      style={{ ...style, aspectRatio: ar }}
+    />
+  );
+}
 
 export default function WorkDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -78,45 +115,23 @@ export default function WorkDetailPage() {
           </div>
         )}
 
-        {/* Media grid */}
-        <div className="work-detail-media-grid" style={project.mediaGridColumns ? { gridTemplateColumns: `repeat(${project.mediaGridColumns}, 1fr)` } : undefined}>
-          {(project.mediaGrid ?? Array(6).fill(null)).map((slot, i) => {
-            const rowSpan = slot?.rowSpan ?? 1;
-            const style: React.CSSProperties = rowSpan > 1 ? { gridRow: `span ${rowSpan}` } : {};
+        {/* Media grid (flat) */}
+        {project.mediaGrid && (
+          <div className="work-detail-media-grid" style={project.mediaGridColumns ? { gridTemplateColumns: `repeat(${project.mediaGridColumns}, 1fr)` } : undefined}>
+            {(project.mediaGrid ?? Array(6).fill(null)).map((slot, i) => renderSlot(slot, i, base))}
+          </div>
+        )}
 
-            if (slot?.images && slot.images.length > 0) {
-              return (
-                <div key={i} className="work-detail-media-slot" style={style}>
-                  {slot.images.map((src, j) => (
-                    <img key={j} src={`${base}${src}`} alt="" className="work-detail-media-img" />
-                  ))}
-                </div>
-              );
-            }
-            if (slot?.video) {
-              const ar = slot.aspectRatio ?? "9/16";
-              return (
-                <div key={i} className="work-detail-media-slot" style={{ ...style, aspectRatio: ar }}>
-                  <video
-                    src={`${base}${slot.video}`}
-                    className="work-detail-media-video"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  />
-                </div>
-              );
-            }
-            const ar = slot?.aspectRatio ?? "4/5";
-            return (
-              <div
-                key={i}
-                className="work-detail-media-placeholder"
-                style={{ ...style, aspectRatio: ar }}
-              />
-            );
-          })}
-        </div>
+        {/* Media rows (per-row column counts) */}
+        {project.mediaRows && project.mediaRows.map((row, ri) => (
+          <div
+            key={ri}
+            className="work-detail-media-grid"
+            style={{ gridTemplateColumns: `repeat(${row.columns}, 1fr)`, marginTop: ri > 0 ? 16 : 0 }}
+          >
+            {row.slots.map((slot, i) => renderSlot(slot, i, base))}
+          </div>
+        ))}
 
         {/* Comment screenshots — side by side, centered */}
         {project.commentImages && project.commentImages.length > 0 && (
