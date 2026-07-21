@@ -579,8 +579,7 @@ body {
   gap: 48px;
   align-items: flex-start;
   padding-top: 64px;
-  margin-top: 64px;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  margin-top: 0;
 }
 
 .work-detail-side-left {
