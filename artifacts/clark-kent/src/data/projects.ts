@@ -142,6 +142,12 @@ export const projects: Project[] = [
         { video: "tyr-12.mp4", aspectRatio: "4/5" },
         { video: "tyr-13.mp4", aspectRatio: "4/5" },
       ]},
+      { columns: 4, slots: [
+        { video: "tyr-14.mp4", aspectRatio: "4/5" },
+        { video: "tyr-15.mp4", aspectRatio: "4/5" },
+        { video: "tyr-16.mp4", aspectRatio: "4/5" },
+        { video: "tyr-17.mp4", aspectRatio: "4/5" },
+      ]},
     ],
     overview: `<a href="https://www.instagram.com/tyrsport/" target="_blank" rel="noopener noreferrer">TYR</a> is a nine-figure performance brand in the hybrid athlete niche. Heading into this campaign, TYR was averaging 500K organic views per month. I worked as creative strategist with the creative director to oversee execution of the CXT-3 training shoe launch, writing all scripts and captions and managing the editing and social rollout.\n\nThe 28-day campaign ran across organic social, email, SMS, and in-store touchpoints, built around a central idea: the CXT-3 as a shoe built for repetition, discipline, and the unglamorous work behind any breakthrough. Content moved through nine narrative chapters, from "Make the Work Routine" through a closing hero film, featuring TYR athletes.\n\nThe campaign generated ~2M organic views and ~67K total organic engagements across the 28-day window.`,
   },
