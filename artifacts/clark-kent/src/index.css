@@ -962,6 +962,7 @@ body {
 .footer-top {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 60px;
   flex: 1;
 }
