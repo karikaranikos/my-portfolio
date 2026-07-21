@@ -21,7 +21,7 @@ export default function Footer() {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
         url: CALENDLY_URL,
-        prefill: { name, email },
+        prefill: { name, email, customAnswers: { a1: message } },
       });
     } else {
       window.open(CALENDLY_URL, "_blank");
