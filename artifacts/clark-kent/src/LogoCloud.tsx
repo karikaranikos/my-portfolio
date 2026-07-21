@@ -1,7 +1,7 @@
 const base = import.meta.env.BASE_URL || "/";
 
-const CARD_W = 135;
-const CARD_H = 95;
+const CARD_W = 115;
+const CARD_H = 81;
 
 interface LogoItem {
   file: string;
