@@ -102,6 +102,15 @@ export const projects: Project[] = [
         ],
       },
       {
+        label: "The Firm (Aje Studio)",
+        text: "For Aje Studio's everyday wear line, we created a fashion-forward character series following three women through their interview days at a fictional architecture firm, then into the dynamic of sharing that world once they're hired. The goal was to give Aje Studio its own aspirational, witty universe, elevated enough for the office, sharp enough for brunch after.",
+        columns: 2,
+        slots: [
+          { video: "aje-studio-trailer.mp4",  aspectRatio: "9/16" },
+          { video: "aje-studio-vignette.mp4", aspectRatio: "9/16" },
+        ],
+      },
+      {
         label: "Le Club (Aje Athletica)",
         text: "Aje Athletica's biggest challenge was that most of its product isn't built around a specific sport, it's lifestyle-first. So we built Le Club, a character-driven series set at an exclusive country club, following two women navigating their way toward membership. Aje Athletica is worn deliberately out of context throughout, fashion-forward rather than functional — think Palm Royale meets Clueless — to show off the versatility of the line.",
         columns: 2,
