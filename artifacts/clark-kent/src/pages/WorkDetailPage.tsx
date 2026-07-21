@@ -80,6 +80,20 @@ export default function WorkDetailPage() {
                 </div>
               );
             }
+            if (slot?.video) {
+              const ar = slot.aspectRatio ?? "9/16";
+              return (
+                <div key={i} className="work-detail-media-slot" style={{ ...style, aspectRatio: ar }}>
+                  <video
+                    src={`${base}${slot.video}`}
+                    className="work-detail-media-video"
+                    controls
+                    playsInline
+                    preload="metadata"
+                  />
+                </div>
+              );
+            }
             const ar = slot?.aspectRatio ?? "4/5";
             return (
               <div

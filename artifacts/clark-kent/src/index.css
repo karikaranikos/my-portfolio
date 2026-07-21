@@ -580,13 +580,21 @@ body {
 }
 
 .work-detail-media-slot {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   overflow: hidden;
 }
 
 .work-detail-media-slot .work-detail-media-img {
   width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.work-detail-media-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: block;
   object-fit: cover;
 }
