@@ -33,3 +33,5 @@ attached_assets/Aje_Studio_Trailer_V2_1784613242411.mp4 filter=lfs diff=lfs merg
 artifacts/clark-kent/public/aje-studio-trailer.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/\#1_High_Honey_Hibiscus_(1)_1784666717057.mov filter=lfs diff=lfs merge=lfs -text
 attached_assets/Waterside_Wisdom_Episode_5.2_1784667512644.mov filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/craftd-poker-3.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/Episode_3_V3_(Previously_Episode_4)_1784668118491.mp4 filter=lfs diff=lfs merge=lfs -text

@@ -130,16 +130,18 @@ export default function WorkDetailPage() {
             )}
             {row.layout === "tall-left" ? (
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
-                {/* First slot: spans both rows, stretches to full height */}
-                <div style={{ gridRow: "1 / 3", alignSelf: "stretch", overflow: "hidden" }}>
+                {/* First slot: spans both rows, natural aspect ratio, aligned to top */}
+                <div style={{ gridRow: "1 / 3", alignSelf: "start" }}>
                   {row.slots[0]?.video && (
-                    <video
-                      src={`${base}${row.slots[0].video}`}
-                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                      controls
-                      playsInline
-                      preload="metadata"
-                    />
+                    <div style={{ aspectRatio: row.slots[0].aspectRatio ?? "9/16", overflow: "hidden" }}>
+                      <video
+                        src={`${base}${row.slots[0].video}`}
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                        controls
+                        playsInline
+                        preload="metadata"
+                      />
+                    </div>
                   )}
                 </div>
                 {/* Remaining slots fill the 2×2 right side */}

@@ -187,16 +187,21 @@ export const projects: Project[] = [
   { id: 11, slug: "craftd",             title: "CRAFTD",              img: "WP11.png", cover: "cover-craftd.png",             category: "",
     overview: `<a href="https://www.instagram.com/craftd/" target="_blank" rel="noopener noreferrer">CRAFTD</a> is a nine-figure men's jewelry brand that wanted to start layering storytelling into their social presence through original show formats rather than one-off content. I worked with the creative director to build the creative strategy and show concepts, owned copywriting for the series, and worked with the team to approve art direction and casting.\n\nWe developed two recurring shows. Waterside Wisdom follows an uncle and nephew who play chess together lakeside every week, using each game as a frame for the uncle to pass down life advice, treating chess and life as the same exercise in strategy. Poker Nights brings to life the kind of mythical, invite-only poker games between older successful entrepreneurs that people always hear about but never see, using the table as a setting for conversations about money, relationships, and the future.\n\nBoth shows were built around the same idea: older men who've earned the right to speak on life, using a shared ritual — chess or cards — as the vehicle for the brand's product and voice to live inside a story instead of an ad.`,
     mediaRows: [
-      { columns: 2, slots: [
+      { label: "Waterside Wisdom", columns: 2, slots: [
         { images: ["craftd-1.jpg"], aspectRatio: "3/2" },
         { images: ["craftd-4.jpg"], aspectRatio: "3/2" },
       ]},
-      { label: "Waterside Wisdom", layout: "tall-left", columns: 3, slots: [
-        { video: "craftd-8.mp4" },
+      { layout: "tall-left", columns: 3, slots: [
+        { video: "craftd-8.mp4", aspectRatio: "9/16" },
         { video: "craftd-5.mp4",  aspectRatio: "4/5" },
         { video: "craftd-9.mp4",  aspectRatio: "4/5" },
         { video: "craftd-6.mp4",  aspectRatio: "4/5" },
         { video: "craftd-7.mp4",  aspectRatio: "4/5" },
+      ]},
+      { label: "Poker Night", columns: 3, slots: [
+        { video: "craftd-poker-1.mp4", aspectRatio: "9/16" },
+        { video: "craftd-poker-2.mp4", aspectRatio: "9/16" },
+        { video: "craftd-poker-3.mp4", aspectRatio: "9/16" },
       ]},
     ],
   },
