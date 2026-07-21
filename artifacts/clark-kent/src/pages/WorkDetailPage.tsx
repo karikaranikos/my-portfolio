@@ -124,12 +124,35 @@ export default function WorkDetailPage() {
 
         {/* Media rows (per-row column counts) */}
         {project.mediaRows && project.mediaRows.map((row, ri) => (
-          <div
-            key={ri}
-            className="work-detail-media-grid"
-            style={{ gridTemplateColumns: `repeat(${row.columns}, 1fr)`, marginTop: ri > 0 ? 16 : 0 }}
-          >
-            {row.slots.map((slot, i) => renderSlot(slot, i, base))}
+          <div key={ri} style={{ marginTop: ri > 0 ? 16 : 0 }}>
+            {row.label && (
+              <p className="work-detail-section-label" style={{ marginBottom: 12 }}>{row.label}</p>
+            )}
+            {row.layout === "tall-left" ? (
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
+                {/* First slot: spans both rows, stretches to full height */}
+                <div style={{ gridRow: "1 / 3", alignSelf: "stretch", overflow: "hidden" }}>
+                  {row.slots[0]?.video && (
+                    <video
+                      src={`${base}${row.slots[0].video}`}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                      controls
+                      playsInline
+                      preload="metadata"
+                    />
+                  )}
+                </div>
+                {/* Remaining slots fill the 2×2 right side */}
+                {row.slots.slice(1).map((slot, i) => renderSlot(slot, i, base))}
+              </div>
+            ) : (
+              <div
+                className="work-detail-media-grid"
+                style={{ gridTemplateColumns: `repeat(${row.columns}, 1fr)` }}
+              >
+                {row.slots.map((slot, i) => renderSlot(slot, i, base))}
+              </div>
+            )}
           </div>
         ))}
 

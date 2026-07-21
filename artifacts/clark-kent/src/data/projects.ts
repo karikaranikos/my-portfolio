@@ -8,6 +8,8 @@ export interface MediaSlot {
 export interface MediaRow {
   columns: number;
   slots: (MediaSlot | null)[];
+  label?: string;           // optional section label above the row
+  layout?: "tall-left";     // first slot spans full height, rest form a 2×2 grid
 }
 
 export interface SideSection {
@@ -189,11 +191,12 @@ export const projects: Project[] = [
         { images: ["craftd-1.jpg"], aspectRatio: "3/2" },
         { images: ["craftd-4.jpg"], aspectRatio: "3/2" },
       ]},
-      { columns: 4, slots: [
-        { video: "craftd-8.mp4", aspectRatio: "9/16" },
-        { video: "craftd-5.mp4", aspectRatio: "9/16" },
-        { video: "craftd-6.mp4", aspectRatio: "9/16" },
-        { video: "craftd-7.mp4", aspectRatio: "9/16" },
+      { label: "Waterside Wisdom", layout: "tall-left", columns: 3, slots: [
+        { video: "craftd-8.mp4" },
+        { video: "craftd-5.mp4",  aspectRatio: "4/5" },
+        { video: "craftd-9.mp4",  aspectRatio: "4/5" },
+        { video: "craftd-6.mp4",  aspectRatio: "4/5" },
+        { video: "craftd-7.mp4",  aspectRatio: "4/5" },
       ]},
     ],
   },
