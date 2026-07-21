@@ -47,6 +47,10 @@ export const projects: Project[] = [
   { id: 3,  slug: "malbon-buckets-club",title: "Malbon Buckets Club", img: "WP3.png",  cover: "cover-malbon-buckets-club.png",category: "",
     mediaGridColumns: 4,
     mediaGrid: [
+      { video: "buckets-malbon-vs.mp4",     aspectRatio: "9/16" },
+      { video: "buckets-sonder.mp4",        aspectRatio: "9/16" },
+      { video: "buckets-stephen.mp4",       aspectRatio: "9/16" },
+      null,
       { video: "buckets-road-ep1.mp4",      aspectRatio: "9/16" },
       { video: "buckets-road-ep2.mp4",      aspectRatio: "9/16" },
       { video: "buckets-road-schoolboy.mp4", aspectRatio: "9/16" },
