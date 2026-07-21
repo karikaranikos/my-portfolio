@@ -132,25 +132,39 @@ export default function WorkDetailPage() {
               (() => {
                 const hasRightCol = row.slots.length > 5;
                 const cols = hasRightCol ? "1fr 1fr 1fr 1.5fr" : "1fr 1fr 1fr";
+                // Explicit [gridColumn, gridRow] for each of the four 2×2 slots
+                const midPos: [number, number][] = [[2,1],[3,1],[2,2],[3,2]];
                 return (
                   <div style={{ display: "grid", gridTemplateColumns: cols, gridTemplateRows: "auto auto", gap: 16 }}>
-                    {/* First slot: 9:16, spans both rows, stretches to fill full height */}
-                    <div style={{ gridRow: "1 / 3", alignSelf: "stretch", overflow: "hidden" }}>
+                    {/* col 1: 9:16 video spanning both rows */}
+                    <div style={{ gridColumn: 1, gridRow: "1 / 3", alignSelf: "stretch", overflow: "hidden" }}>
                       {row.slots[0]?.video && (
                         <video
                           src={`${base}${row.slots[0].video}`}
                           style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                          controls
-                          playsInline
-                          preload="metadata"
+                          controls playsInline preload="metadata"
                         />
                       )}
                     </div>
-                    {/* Middle 2×2 */}
-                    {row.slots.slice(1, 5).map((slot, i) => renderSlot(slot, i, base))}
-                    {/* Right column: landscape photos, each fills its row */}
+                    {/* cols 2–3: 2×2 block, explicitly positioned */}
+                    {row.slots.slice(1, 5).map((slot, i) => {
+                      const [gc, gr] = midPos[i];
+                      return (
+                        <div key={`mid-${i}`} style={{ gridColumn: gc, gridRow: gr, overflow: "hidden" }}>
+                          {slot?.video && (
+                            <div style={{ aspectRatio: slot.aspectRatio ?? "4/5" }}>
+                              <video src={`${base}${slot.video}`} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} controls playsInline preload="metadata" />
+                            </div>
+                          )}
+                          {slot?.images?.map((src, j) => (
+                            <img key={j} src={`${base}${src}`} alt="" style={{ width: "100%", display: "block" }} />
+                          ))}
+                        </div>
+                      );
+                    })}
+                    {/* col 4: stacked landscape photos, explicitly positioned */}
                     {hasRightCol && row.slots.slice(5).map((slot, i) => (
-                      <div key={`rc-${i}`} style={{ alignSelf: "stretch", overflow: "hidden" }}>
+                      <div key={`rc-${i}`} style={{ gridColumn: 4, gridRow: i + 1, alignSelf: "stretch", overflow: "hidden" }}>
                         {slot?.images?.map((src, j) => (
                           <img key={j} src={`${base}${src}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                         ))}
