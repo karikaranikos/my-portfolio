@@ -22,7 +22,6 @@ const worksData = [
   { id: 10, img: "W10.png", title: "Lady Bird Soda" },
   { id: 11, img: "W11.png", title: "CRAFTD" },
   { id: 12, img: "W12.png", title: "APL" },
-  { id: 6,  img: "W6.png",  title: "Real American Beer" },
   { id: 13, img: "W1.png",  title: "Hampton" },
   { id: 14, img: "W2.png",  title: "Malbon" },
   { id: 15, img: "W3.png",  title: "Malbon Buckets Club" },
@@ -33,7 +32,6 @@ const worksData = [
   { id: 22, img: "W10.png", title: "Lady Bird Soda" },
   { id: 23, img: "W11.png", title: "CRAFTD" },
   { id: 24, img: "W12.png", title: "APL" },
-  { id: 18, img: "W6.png",  title: "Real American Beer" },
 ];
 
 type SlotConfig = {
