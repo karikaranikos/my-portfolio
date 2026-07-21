@@ -142,11 +142,10 @@ export const projects: Project[] = [
         { video: "tyr-12.mp4", aspectRatio: "4/5" },
         { video: "tyr-13.mp4", aspectRatio: "4/5" },
       ]},
-      { columns: 5, slots: [
+      { columns: 4, slots: [
         { video: "tyr-14.mp4", aspectRatio: "4/5" },
         { video: "tyr-15.mp4", aspectRatio: "4/5" },
         { video: "tyr-16.mp4", aspectRatio: "4/5" },
-        null,
         { video: "tyr-17.mp4", aspectRatio: "4/5" },
       ]},
     ],
