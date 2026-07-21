@@ -43,3 +43,9 @@ artifacts/clark-kent/public/apl-6.mp4 filter=lfs diff=lfs merge=lfs -text
 artifacts/clark-kent/public/apl-7.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/BREATHABILITY_-_CURIOSITY_-_REEL_POST_5_1784669821716.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/CURIOSITY_3_-_LOCK_DOWN_-_REEL_POST_5_1784669868772.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-10.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-11.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-9.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/POST_1_-_LAUNCH_1_1784670402565.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/POST_1_-_LAUNCH_8_1784670370533.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/POST_1_-_LAUNCH_9_1784670304981.mp4 filter=lfs diff=lfs merge=lfs -text
