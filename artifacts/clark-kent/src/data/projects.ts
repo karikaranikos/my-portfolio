@@ -14,6 +14,7 @@ export interface Project {
   category: string;
   overview?: string; // case study body copy
   headerVideo?: string;              // optional full-width horizontal video above the media grid
+  mediaGridColumns?: number;          // columns in the media grid (default 3)
   mediaGrid?: (MediaSlot | null)[];  // 6 slots, null = placeholder
   commentImages?: string[];          // optional screenshots shown side-by-side below media grid
 }
@@ -30,10 +31,16 @@ export const projects: Project[] = [
   },
   { id: 2,  slug: "malbon",             title: "Malbon",              img: "WP2.png",  cover: "cover-malbon.png",             category: "",
     headerVideo: "malbon-reel-1.mp4",
+    mediaGridColumns: 4,
     mediaGrid: [
       { video: "malbon-reel-2.mp4",       aspectRatio: "9/16" },
       { video: "malbon-dinnertime.mp4",   aspectRatio: "9/16" },
       { video: "malbon-bird-caller.mp4",  aspectRatio: "9/16" },
+      { video: "malbon-run-club.mp4",     aspectRatio: "9/16" },
+      { video: "malbon-micd-up-1.mp4",    aspectRatio: "9/16" },
+      { video: "malbon-micd-up-2.mp4",    aspectRatio: "9/16" },
+      { video: "malbon-doorbell.mp4",     aspectRatio: "9/16" },
+      { video: "malbon-dj-reel.mp4",      aspectRatio: "9/16" },
     ],
     overview: `I created and led the creative strategy, copywriting, and on-site production for the launch of <a href="https://www.instagram.com/malbonhome/" target="_blank" rel="noopener noreferrer">Malbon Home</a> at the 2026 Masters — Malbon's four-day activation in Augusta. Malbon's brand equity goal was to create an activation where everyone was welcome, in a space where brand activations historically are invite-only and exclusive.\n\nThe brief: grow to 10K followers in 4 days, shoot, edit + post in real time, without losing Malbon's premium positioning — while weaving in brand partners, celebrity guests, and everyday community members equally, all in service of their core narrative: "the green is the common ground." Easy, right?\n\nThat meant building a content strategy versatile enough to cover VIP guests like <a href="https://www.instagram.com/charley.hull/?hl=en" target="_blank" rel="noopener noreferrer">Charlie Hull</a>, <a href="https://www.instagram.com/dwyanewade/?hl=en" target="_blank" rel="noopener noreferrer">Dwyane Wade</a>, <a href="https://www.instagram.com/teamswish/?hl=en" target="_blank" rel="noopener noreferrer">J.R. Smith</a>, <a href="https://www.instagram.com/groovyq/?hl=en" target="_blank" rel="noopener noreferrer">Schoolboy Q</a>, and <a href="https://www.instagram.com/victorcruz/" target="_blank" rel="noopener noreferrer">Victor Cruz</a>, everyday community members walking through the door, and dedicated branded content for partners like Nespresso, LALO Tequila, Tito's, and Garage Beer.\n\nI built the strategy around "sets": treating each space in the house as its own mini content series, then assigning a team member to each set to execute concepts on the spot. One set became our viral <a href="https://www.instagram.com/reels/DW624PsEfXy/" target="_blank" rel="noopener noreferrer">"Letters From Augusta"</a> series, where an Etsy payphone at the front door prompted guests to call whoever introduced them to golf — we shot 25 episodes in a single day and gained over 1.3M views.\n\nI led a team of 8, posting around 300 pieces of content over the activation, generating 7M organic views and growing the account from 0 to 15K followers in 5 days. The approach was later cited as a model by marketing newsletter <a href="https://www.linkinbio.news/p/your-campaign-needs-more-on-ramps" target="_blank" rel="noopener noreferrer">Link in Bio</a>, for building modern campaigns that work with non-chronological social algorithms.`,
   },

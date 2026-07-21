@@ -79,7 +79,7 @@ export default function WorkDetailPage() {
         )}
 
         {/* Media grid */}
-        <div className="work-detail-media-grid">
+        <div className="work-detail-media-grid" style={project.mediaGridColumns ? { gridTemplateColumns: `repeat(${project.mediaGridColumns}, 1fr)` } : undefined}>
           {(project.mediaGrid ?? Array(6).fill(null)).map((slot, i) => {
             const rowSpan = slot?.rowSpan ?? 1;
             const style: React.CSSProperties = rowSpan > 1 ? { gridRow: `span ${rowSpan}` } : {};
