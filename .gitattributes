@@ -51,3 +51,5 @@ attached_assets/POST_1_-_LAUNCH_8_1784670370533.mp4 filter=lfs diff=lfs merge=lf
 attached_assets/POST_1_-_LAUNCH_9_1784670304981.mp4 filter=lfs diff=lfs merge=lfs -text
 artifacts/clark-kent/public/apl-14.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/POST_2_-_LAUNCH_1_1784670582900.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-16.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/POST_3_-_LAUNCH_1_1784670635702.mp4 filter=lfs diff=lfs merge=lfs -text

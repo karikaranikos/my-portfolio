@@ -229,6 +229,12 @@ export const projects: Project[] = [
         { video: "apl-14.mp4", aspectRatio: "4/5" },
         { video: "apl-15.mp4", aspectRatio: "4/5" },
       ]},
+      { columns: 4, slots: [
+        { video: "apl-16.mp4", aspectRatio: "4/5" },
+        { video: "apl-17.mp4", aspectRatio: "4/5" },
+        { video: "apl-18.mp4", aspectRatio: "4/5" },
+        { video: "apl-19.mp4", aspectRatio: "4/5" },
+      ]},
     ],
   },
 ];
