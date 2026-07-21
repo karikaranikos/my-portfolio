@@ -68,6 +68,7 @@ export default function ServicesPage() {
       {/* CTA Block */}
       <div className="services-cta">
         <div className="services-cta-left">
+          <h2 className="services-cta-heading">Ready to work<br />together?</h2>
         </div>
         <div className="services-cta-right">
           <a href="/#contact" className="services-cta-button">Get in touch →</a>
