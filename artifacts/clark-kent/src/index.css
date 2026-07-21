@@ -608,11 +608,14 @@ body {
 }
 
 .work-detail-comment-img {
-  width: calc(50% - 12px);
-  max-width: 480px;
   height: auto;
   display: block;
   border-radius: 8px;
+  max-width: 480px;
+}
+
+.work-detail-comment-img:last-child {
+  width: calc(50% - 12px);
 }
 
 /* ── Work Detail Prev / Next Nav ────────────────────────────── */
