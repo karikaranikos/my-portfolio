@@ -129,40 +129,36 @@ export default function WorkDetailPage() {
               <p className="work-detail-section-label" style={{ marginBottom: 12 }}>{row.label}</p>
             )}
             {row.layout === "tall-left" ? (
-              <div style={{ maxWidth: "72%", margin: "0 auto" }}>
-                {(() => {
-                  const hasRightCol = row.slots.length > 5;
-                  const cols = hasRightCol ? "1fr 0.711fr 0.711fr 0.85fr" : "1fr 0.711fr 0.711fr";
-                  return (
-                    <div style={{ display: "grid", gridTemplateColumns: cols, gridTemplateRows: "auto auto", gap: 16, alignItems: "center" }}>
-                      {/* First slot: 9:16, spans both rows */}
-                      <div style={{ gridRow: "1 / 3", alignSelf: "center" }}>
-                        {row.slots[0]?.video && (
-                          <div style={{ aspectRatio: row.slots[0].aspectRatio ?? "9/16", overflow: "hidden" }}>
-                            <video
-                              src={`${base}${row.slots[0].video}`}
-                              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                              controls
-                              playsInline
-                              preload="metadata"
-                            />
-                          </div>
-                        )}
-                      </div>
-                      {/* Middle 2×2 */}
-                      {row.slots.slice(1, 5).map((slot, i) => renderSlot(slot, i, base))}
-                      {/* Right column: stacked photos, each stretches to fill its row */}
-                      {hasRightCol && row.slots.slice(5).map((slot, i) => (
-                        <div key={`rc-${i}`} style={{ alignSelf: "stretch", overflow: "hidden" }}>
-                          {slot?.images?.map((src, j) => (
-                            <img key={j} src={`${base}${src}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                          ))}
-                        </div>
-                      ))}
+              (() => {
+                const hasRightCol = row.slots.length > 5;
+                const cols = hasRightCol ? "1fr 1fr 1fr 1.5fr" : "1fr 1fr 1fr";
+                return (
+                  <div style={{ display: "grid", gridTemplateColumns: cols, gridTemplateRows: "auto auto", gap: 16 }}>
+                    {/* First slot: 9:16, spans both rows, stretches to fill full height */}
+                    <div style={{ gridRow: "1 / 3", alignSelf: "stretch", overflow: "hidden" }}>
+                      {row.slots[0]?.video && (
+                        <video
+                          src={`${base}${row.slots[0].video}`}
+                          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                          controls
+                          playsInline
+                          preload="metadata"
+                        />
+                      )}
                     </div>
-                  );
-                })()}
-              </div>
+                    {/* Middle 2×2 */}
+                    {row.slots.slice(1, 5).map((slot, i) => renderSlot(slot, i, base))}
+                    {/* Right column: landscape photos, each fills its row */}
+                    {hasRightCol && row.slots.slice(5).map((slot, i) => (
+                      <div key={`rc-${i}`} style={{ alignSelf: "stretch", overflow: "hidden" }}>
+                        {slot?.images?.map((src, j) => (
+                          <img key={j} src={`${base}${src}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                );
+              })()
             ) : (
               <div
                 className="work-detail-media-grid"
