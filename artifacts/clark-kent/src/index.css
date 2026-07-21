@@ -599,6 +599,24 @@ body {
   object-fit: cover;
 }
 
+/* ── Work Detail Header Video (full-width horizontal) ────────── */
+.work-detail-header-video {
+  width: 100%;
+  margin-bottom: 16px;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-detail-header-video-el {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* ── Work Detail Comment Screenshots ────────────────────────── */
 .work-detail-comments-row {
   display: flex;

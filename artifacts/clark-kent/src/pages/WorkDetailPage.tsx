@@ -65,6 +65,19 @@ export default function WorkDetailPage() {
           </div>
         </div>
 
+        {/* Full-width horizontal header video */}
+        {project.headerVideo && (
+          <div className="work-detail-header-video">
+            <video
+              src={`${base}${project.headerVideo}`}
+              className="work-detail-header-video-el"
+              controls
+              playsInline
+              preload="metadata"
+            />
+          </div>
+        )}
+
         {/* Media grid */}
         <div className="work-detail-media-grid">
           {(project.mediaGrid ?? Array(6).fill(null)).map((slot, i) => {
