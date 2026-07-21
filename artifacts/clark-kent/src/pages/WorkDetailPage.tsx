@@ -104,6 +104,15 @@ export default function WorkDetailPage() {
             );
           })}
         </div>
+
+        {/* Comment screenshots — side by side, centered */}
+        {project.commentImages && project.commentImages.length > 0 && (
+          <div className="work-detail-comments-row">
+            {project.commentImages.map((src, i) => (
+              <img key={i} src={`${base}${src}`} alt="" className="work-detail-comment-img" />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Prev / Next navigation */}
