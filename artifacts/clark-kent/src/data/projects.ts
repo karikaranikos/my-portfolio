@@ -191,6 +191,12 @@ export const projects: Project[] = [
         { images: ["craftd-3.jpg"], aspectRatio: "4/5" },
         { images: ["craftd-4.jpg"], aspectRatio: "3/2" },
       ]},
+      { columns: 4, slots: [
+        { video: "craftd-8.mp4", aspectRatio: "9/16" },
+        { video: "craftd-5.mp4", aspectRatio: "9/16" },
+        { video: "craftd-6.mp4", aspectRatio: "9/16" },
+        { video: "craftd-7.mp4", aspectRatio: "9/16" },
+      ]},
     ],
   },
   { id: 12, slug: "apl",                title: "APL",                 img: "WP12.png", cover: "cover-apl.png",                category: "",
