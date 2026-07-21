@@ -4,12 +4,19 @@ import LogoCloud from "./LogoCloud";
 declare global {
   interface Window {
     Calendly?: {
-      initPopupWidget: (opts: { url: string; prefill?: { name?: string; email?: string } }) => void;
+      initPopupWidget: (opts: {
+        url: string;
+        prefill?: {
+          name?: string;
+          email?: string;
+          customAnswers?: { [key: string]: string };
+        };
+      }) => void;
     };
   }
 }
 
-const CALENDLY_URL = "https://calendly.com/karikaranikos-/interest-call";
+const CALENDLY_URL = import.meta.env.VITE_CALENDLY_URL;
 
 export default function Footer() {
   const [name, setName] = useState("");
@@ -18,6 +25,7 @@ export default function Footer() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Submitting to Calendly:", { CALENDLY_URL, name, email, message });
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
         url: CALENDLY_URL,
@@ -31,15 +39,11 @@ export default function Footer() {
   return (
     <footer id="contact" className="footer-section">
       <div className="footer-inner">
-
         <div className="footer-top">
-
-          {/* Left — heading + form */}
           <div className="footer-top-left">
             <h2 className="footer-heading">
               LET'S WORK<br />TOGETHER.
             </h2>
-
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="contact-form-row">
                 <div className="contact-form-field">
@@ -80,21 +84,16 @@ export default function Footer() {
               </button>
             </form>
           </div>
-
-          {/* Right — floating logo cloud */}
           <div className="footer-top-right">
             <LogoCloud />
           </div>
-
         </div>
-
         <div className="footer-bottom">
           <p className="footer-copy">© Kari Karanikos 2026</p>
           <div className="footer-socials">
             <a href="https://www.linkedin.com/in/zakaria-karanikos/" target="_blank" rel="noopener noreferrer" className="footer-social-link">LinkedIn</a>
           </div>
         </div>
-
       </div>
     </footer>
   );
