@@ -162,6 +162,17 @@ export const projects: Project[] = [
   },
   { id: 10, slug: "lady-bird-soda",     title: "Lady Bird Soda",      img: "WP10.png", cover: "cover-lady-bird-soda.png",     category: "",
     overview: `<a href="https://www.instagram.com/ladybirdsoda/" target="_blank" rel="noopener noreferrer">Lady Bird Soda</a> came to us with a strong visual presence already in place but no brand narrative tying it together. A Texas brand selling both flavor-forward sodas and alcohol mixers, they wanted their heritage and storytelling to come through in a way that felt culturally relevant online, not just visually pleasing.\n\nContent also needed to work double duty — performing organically while being strong enough to repurpose as paid assets.\n\nI owned the account end to end as creative strategist and copywriter and worked with the production team to guide art direction and casting.\n\nWe iterated on multiple content series to find a brand narrative and content market fit that was product-forward without leaning too hard into education or sales.\n\nOur winner was "After Hours," a mocktail recipe series using both the sodas and mixers to build out drinks. Once After Hours started winning with the audience, we layered in monthly campaigns, including a Texas summer campaign and the launch of the Lady Bird Transfusion, both built around visual storytelling and skits that carried the brand's throughline further.\n\nOver two months, Lady Bird gained 7,000 followers, established a clear brand narrative and content market fit, and elevated its visual presence across feed.`,
+    mediaRows: [
+      { columns: 2, slots: [
+        { video: "ladybird-1.mp4", aspectRatio: "16/9" },
+        { video: "ladybird-2.mp4", aspectRatio: "16/9" },
+      ]},
+      { columns: 3, slots: [
+        { video: "ladybird-3.mp4", aspectRatio: "1728/2160" },
+        { video: "ladybird-4.mp4", aspectRatio: "1728/2160" },
+        { video: "ladybird-5.mp4", aspectRatio: "1728/2160" },
+      ]},
+    ],
   },
   { id: 11, slug: "craftd",             title: "CRAFTD",              img: "WP11.png", cover: "cover-craftd.png",             category: "",
     overview: `<a href="https://www.instagram.com/craftd/" target="_blank" rel="noopener noreferrer">CRAFTD</a> is a nine-figure men's jewelry brand that wanted to start layering storytelling into their social presence through original show formats rather than one-off content. I worked with the creative director to build the creative strategy and show concepts, owned copywriting for the series, and worked with the team to approve art direction and casting.\n\nWe developed two recurring shows. Waterside Wisdom follows an uncle and nephew who play chess together lakeside every week, using each game as a frame for the uncle to pass down life advice, treating chess and life as the same exercise in strategy. Poker Nights brings to life the kind of mythical, invite-only poker games between older successful entrepreneurs that people always hear about but never see, using the table as a setting for conversations about money, relationships, and the future.\n\nBoth shows were built around the same idea: older men who've earned the right to speak on life, using a shared ritual — chess or cards — as the vehicle for the brand's product and voice to live inside a story instead of an ad.`,
