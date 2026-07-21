@@ -114,7 +114,7 @@ export const projects: Project[] = [
       },
       {
         label: "Le Club (Aje Athletica)",
-        text: "Aje Athletica's biggest challenge was that most of its product isn't built around a specific sport, it's lifestyle-first. So we built Le Club, a character-driven series set at an exclusive country club, following two women navigating their way toward membership. Aje Athletica is worn deliberately out of context throughout, fashion-forward rather than functional — think Palm Royale meets Clueless — to show off the versatility of the line.",
+        text: "Aje Athletica's biggest challenge was that most of its product isn't built around a specific sport, it's lifestyle-first. So we built Le Club, a character-driven series set at an exclusive country club, following two women navigating their way toward membership. Aje Athletica is worn deliberately out of context throughout, fashion-forward rather than functional to show off the versatility of the line.",
         columns: 2,
         slots: [
           { video: "aje-leclub-ep5.mp4",      aspectRatio: "9/16" },
