@@ -124,11 +124,11 @@ export const projects: Project[] = [
   { id: 7,  slug: "tyr",                title: "TYR",                 img: "WP7.png",  cover: "cover-tyr.png",                category: "",
     mediaRows: [
       { columns: 5, slots: [
+        { video: "tyr-5.mp4", aspectRatio: "9/16" },
         { video: "tyr-1.mp4", aspectRatio: "9/16" },
         { video: "tyr-2.mp4", aspectRatio: "9/16" },
         { video: "tyr-3.mp4", aspectRatio: "9/16" },
         { video: "tyr-4.mp4", aspectRatio: "9/16" },
-        { video: "tyr-5.mp4", aspectRatio: "9/16" },
       ]},
       { columns: 4, slots: [
         { video: "tyr-6.mp4", aspectRatio: "716/920" },
