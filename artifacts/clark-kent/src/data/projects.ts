@@ -205,5 +205,13 @@ export const projects: Project[] = [
   },
   { id: 12, slug: "apl",                title: "APL",                 img: "WP12.png", cover: "cover-apl.png",                category: "",
     overview: `For <a href="https://www.instagram.com/apl/" target="_blank" rel="noopener noreferrer">APL</a>'s launch of the VEIL, I served as co-creative strategist and social producer. Founders <a href="https://www.instagram.com/adamgoldston/?hl=en" target="_blank" rel="noopener noreferrer">Adam</a> and <a href="https://www.instagram.com/ryangoldston/?hl=en" target="_blank" rel="noopener noreferrer">Ryan Goldston</a> center every product line around a "simple, yet severe" branding philosophy, so the challenge was finding a way to tie the shoe's actual physical features — its performance, movement, and feel — into a visual world that felt both athletic and high fashion.\n\nWe created the campaign concept, "Nature is the World's Veil," tying the shoe's features back to the shoe's name and the way it moves with the body, similar to the way a veil moves within its environment: natural, elegant, ever-shifting. We used nature itself as the studio, integrating the VEIL into locations and elements to represent clean, effortless movement.\n\nThe goal was to position our talent not just as an athlete performing at the highest level, but as someone completely immersed in nature to signify how the shoe also completely immerses into the athletic experience by bending, forming, and molding to the athlete.\n\nThe campaign was built across 4 phases, each with 3 pieces of content, 12 pieces total, designed to unfold as a single, increasingly immersive visual world. Rather than standalone posts, each phase built on the last, so a viewer could move through APL's page and step further into the product's world with every piece they encountered.`,
+    mediaRows: [
+      { columns: 4, slots: [
+        { video: "apl-1.mp4", aspectRatio: "4/5" },
+        { video: "apl-2.mp4", aspectRatio: "4/5" },
+        { video: "apl-3.mp4", aspectRatio: "4/5" },
+        { video: "apl-4.mp4", aspectRatio: "4/5" },
+      ]},
+    ],
   },
 ];

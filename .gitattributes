@@ -35,3 +35,6 @@ attached_assets/\#1_High_Honey_Hibiscus_(1)_1784666717057.mov filter=lfs diff=lf
 attached_assets/Waterside_Wisdom_Episode_5.2_1784667512644.mov filter=lfs diff=lfs merge=lfs -text
 artifacts/clark-kent/public/craftd-poker-3.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/Episode_3_V3_(Previously_Episode_4)_1784668118491.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-4.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/ANTICIPATION_1_-_POST_7_1784669689435.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/CURIOSITY_1_-_ELASTICITY_1_-_REEL_POST_6_1784669761840.mp4 filter=lfs diff=lfs merge=lfs -text
