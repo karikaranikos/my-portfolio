@@ -1011,7 +1011,7 @@ body {
 .footer-heading {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
-  font-size: clamp(60px, 10vw, 160px);
+  font-size: clamp(48px, 7vw, 110px);
   line-height: 0.92;
   letter-spacing: -0.03em;
   color: #fff;
