@@ -172,6 +172,14 @@ export const projects: Project[] = [
         { video: "ladybird-4.mp4", aspectRatio: "1728/2160" },
         { video: "ladybird-5.mp4", aspectRatio: "1728/2160" },
       ]},
+      { columns: 2, slots: [
+        { video: "ladybird-6.mp4", aspectRatio: "4/3" },
+        { video: "ladybird-7.mp4", aspectRatio: "4/3" },
+      ]},
+      { columns: 2, slots: [
+        { video: "ladybird-8.mp4", aspectRatio: "16/9" },
+        { video: "ladybird-9.mp4", aspectRatio: "16/9" },
+      ]},
     ],
   },
   { id: 11, slug: "craftd",             title: "CRAFTD",              img: "WP11.png", cover: "cover-craftd.png",             category: "",
