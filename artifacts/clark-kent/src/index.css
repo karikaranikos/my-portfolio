@@ -603,7 +603,7 @@ body {
 .work-detail-comments-row {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
   margin-top: 24px;
 }
