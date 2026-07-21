@@ -573,6 +573,38 @@ body {
   gap: 16px;
 }
 
+/* ── Side section: text left, videos right ───────────────────── */
+.work-detail-side-section {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  padding-top: 64px;
+  margin-top: 64px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.work-detail-side-left {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 40px;
+}
+
+.work-detail-side-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.35);
+  margin: 0;
+}
+
+.work-detail-side-right {
+  flex: 1;
+}
+
 .work-detail-media-placeholder {
   background: #f0ece8;
   aspect-ratio: 4/5;

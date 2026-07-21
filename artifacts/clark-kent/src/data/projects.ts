@@ -10,6 +10,13 @@ export interface MediaRow {
   slots: (MediaSlot | null)[];
 }
 
+export interface SideSection {
+  label: string;          // bold heading shown on the left
+  text: string;           // body copy shown below the label
+  slots: (MediaSlot | null)[];
+  columns?: number;       // video columns on the right (default 2)
+}
+
 export interface Project {
   id: number;
   slug: string;
@@ -22,6 +29,7 @@ export interface Project {
   mediaGridColumns?: number;          // columns in the media grid (default 3)
   mediaGrid?: (MediaSlot | null)[];  // flat grid, null = placeholder
   mediaRows?: MediaRow[];            // per-row grids, each with its own column count
+  sideSections?: SideSection[];      // text-left / videos-right paired sections
   commentImages?: string[];          // optional screenshots shown side-by-side below media grid
 }
 
@@ -82,7 +90,18 @@ export const projects: Project[] = [
     overview: `I worked with AG1 to launch AGZ, their new nighttime sleep supplement, with an original social show designed to give the product its own creative identity from day one. I served as creative strategist and copywriter, developing a strategy centered on building a direct association between "the best night's sleep" and AGZ itself, letting the new product borrow credibility and reach from AG1's already loyal, thriving fanbase rather than starting from scratch.\n\nTo do this, we designed an aspirational travel-style series to live on AGZ's new account, spotlighting the best places in the world to get a great night's rest. Each episode paired that aspirational travel format with a scientific or educational angle — the calming effect of a flowing river, the benefits of being outside in nature come evening — positioning the account as an authority on rest itself, not just a product feed.`,
   },
   { id: 5,  slug: "aje",                title: "Aje.",                img: "WP5.png",  cover: "cover-aje.png",                category: "",
-    overview: `I worked with the production team to build and oversee creative strategy and brand narrative positioning across Aje's three sub-brands: Aje, their parent line for high-fashion event wear; Aje Athletica, their athletic lifestyle line; and Aje Studio, their elevated everyday wear line. Each needed its own distinct content world, so we developed a separate original concept for each.\n\n<strong>The Gallerist (Aje)</strong><br>For Aje's flagship line, we built an episodic series centered on one iconic gallerist whose art-filled gallery becomes the backdrop for a rotating cast of artists, collectors, and guests moving through her world. Aje is worn throughout as an extension of her curatorial eye, considered and impossible to overlook, positioning the brand around the culturally engaged, self-possessed woman building a world of her own.\n\n<strong>The Firm (Aje Studio)</strong><br>For Aje Studio's everyday wear line, we created a fashion-forward character series following three women through their interview days at a fictional architecture firm, then into the dynamic of sharing that world once they're hired. The goal was to give Aje Studio its own aspirational, witty universe, elevated enough for the office, sharp enough for brunch after.\n\n<strong>Le Club (Aje Athletica)</strong><br>Aje Athletica's biggest challenge was that most of its product isn't built around a specific sport, it's lifestyle-first. So we built Le Club, a character-driven series set at an exclusive country club, following two women navigating their way toward membership. Aje Athletica is worn deliberately out of context throughout, fashion-forward rather than functional — think Palm Royale meets Clueless — to show off the versatility of the line.`,
+    overview: `I worked with the production team to build and oversee creative strategy and brand narrative positioning across Aje's three sub-brands: Aje, their parent line for high-fashion event wear; Aje Athletica, their athletic lifestyle line; and Aje Studio, their elevated everyday wear line. Each needed its own distinct content world, so we developed a separate original concept for each.\n\n<strong>The Firm (Aje Studio)</strong><br>For Aje Studio's everyday wear line, we created a fashion-forward character series following three women through their interview days at a fictional architecture firm, then into the dynamic of sharing that world once they're hired. The goal was to give Aje Studio its own aspirational, witty universe, elevated enough for the office, sharp enough for brunch after.\n\n<strong>Le Club (Aje Athletica)</strong><br>Aje Athletica's biggest challenge was that most of its product isn't built around a specific sport, it's lifestyle-first. So we built Le Club, a character-driven series set at an exclusive country club, following two women navigating their way toward membership. Aje Athletica is worn deliberately out of context throughout, fashion-forward rather than functional — think Palm Royale meets Clueless — to show off the versatility of the line.`,
+    sideSections: [
+      {
+        label: "The Gallerist (Aje)",
+        text: "For Aje's flagship line, we built an episodic series centered on one iconic gallerist whose art-filled gallery becomes the backdrop for a rotating cast of artists, collectors, and guests moving through her world. Aje is worn throughout as an extension of her curatorial eye, considered and impossible to overlook, positioning the brand around the culturally engaged, self-possessed woman building a world of her own.",
+        columns: 2,
+        slots: [
+          { video: "aje-gallerist-ep1.mp4", aspectRatio: "9/16" },
+          { video: "aje-gallerist-ep4.mp4", aspectRatio: "9/16" },
+        ],
+      },
+    ],
   },
   { id: 7,  slug: "tyr",                title: "TYR",                 img: "WP7.png",  cover: "cover-tyr.png",                category: "",
     overview: `<a href="https://www.instagram.com/tyrsport/" target="_blank" rel="noopener noreferrer">TYR</a> is a nine-figure performance brand in the hybrid athlete niche. Heading into this campaign, TYR was averaging 500K organic views per month. I worked as creative strategist with the creative director to oversee execution of the CXT-3 training shoe launch, writing all scripts and captions and managing the editing and social rollout.\n\nThe 28-day campaign ran across organic social, email, SMS, and in-store touchpoints, built around a central idea: the CXT-3 as a shoe built for repetition, discipline, and the unglamorous work behind any breakthrough. Content moved through nine narrative chapters, from "Make the Work Routine" through a closing hero film, featuring TYR athletes.\n\nThe campaign generated ~2M organic views and ~67K total organic engagements across the 28-day window.`,

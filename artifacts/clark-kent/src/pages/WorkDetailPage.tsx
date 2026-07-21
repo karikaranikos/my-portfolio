@@ -1,5 +1,5 @@
 import { Link, useParams } from "wouter";
-import { projects, MediaSlot } from "../data/projects";
+import { projects, MediaSlot, SideSection } from "../data/projects";
 
 const base = import.meta.env.BASE_URL || "/";
 
@@ -130,6 +130,24 @@ export default function WorkDetailPage() {
             style={{ gridTemplateColumns: `repeat(${row.columns}, 1fr)`, marginTop: ri > 0 ? 16 : 0 }}
           >
             {row.slots.map((slot, i) => renderSlot(slot, i, base))}
+          </div>
+        ))}
+
+        {/* Side sections: text left, videos right */}
+        {project.sideSections && project.sideSections.map((section: SideSection, si: number) => (
+          <div key={si} className="work-detail-side-section">
+            <div className="work-detail-side-left">
+              <p className="work-detail-side-label">{section.label}</p>
+              <p className="work-detail-body">{section.text}</p>
+            </div>
+            <div className="work-detail-side-right">
+              <div
+                className="work-detail-media-grid"
+                style={{ gridTemplateColumns: `repeat(${section.columns ?? 2}, 1fr)` }}
+              >
+                {section.slots.map((slot, i) => renderSlot(slot, i, base))}
+              </div>
+            </div>
           </div>
         ))}
 

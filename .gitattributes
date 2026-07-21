@@ -25,3 +25,7 @@ attached_assets/Sonder_V2_(1)_1784611097439.mp4 filter=lfs diff=lfs merge=lfs -t
 artifacts/clark-kent/public/buckets-malbon-vs.mp4 filter=lfs diff=lfs merge=lfs -text
 artifacts/clark-kent/public/buckets-sonder.mp4 filter=lfs diff=lfs merge=lfs -text
 artifacts/clark-kent/public/buckets-stephen.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/aje-gallerist-ep1.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/aje-gallerist-ep4.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/EPISODE_1_V4_1784612811505.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/EPISODE_4_V4_1784612921840.mp4 filter=lfs diff=lfs merge=lfs -text
