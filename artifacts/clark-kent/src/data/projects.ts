@@ -75,8 +75,8 @@ export const projects: Project[] = [
     mediaGridColumns: 4,
     mediaGrid: [
       { video: "ag1-hero.mp4", aspectRatio: "9/16" },
-      { video: "ag1-ep1.mp4",  aspectRatio: "9/16" },
       { video: "ag1-ep2.mp4",  aspectRatio: "9/16" },
+      { video: "ag1-ep1.mp4",  aspectRatio: "9/16" },
       { video: "ag1-ep3.mp4",  aspectRatio: "9/16" },
     ],
     overview: `I worked with AG1 to launch AGZ, their new nighttime sleep supplement, with an original social show designed to give the product its own creative identity from day one. I served as creative strategist and copywriter, developing a strategy centered on building a direct association between "the best night's sleep" and AGZ itself, letting the new product borrow credibility and reach from AG1's already loyal, thriving fanbase rather than starting from scratch.\n\nTo do this, we designed an aspirational travel-style series to live on AGZ's new account, spotlighting the best places in the world to get a great night's rest. Each episode paired that aspirational travel format with a scientific or educational angle — the calming effect of a flowing river, the benefits of being outside in nature come evening — positioning the account as an authority on rest itself, not just a product feed.`,
