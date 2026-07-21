@@ -129,23 +129,25 @@ export default function WorkDetailPage() {
               <p className="work-detail-section-label" style={{ marginBottom: 12 }}>{row.label}</p>
             )}
             {row.layout === "tall-left" ? (
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gridTemplateRows: "auto auto", gap: 16 }}>
-                {/* First slot: spans both rows, natural aspect ratio, aligned to top */}
-                <div style={{ gridRow: "1 / 3", alignSelf: "start" }}>
-                  {row.slots[0]?.video && (
-                    <div style={{ aspectRatio: row.slots[0].aspectRatio ?? "9/16", overflow: "hidden" }}>
-                      <video
-                        src={`${base}${row.slots[0].video}`}
-                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                        controls
-                        playsInline
-                        preload="metadata"
-                      />
-                    </div>
-                  )}
+              <div style={{ maxWidth: "72%", margin: "0 auto" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 0.711fr 0.711fr", gridTemplateRows: "auto auto", gap: 16, alignItems: "center" }}>
+                  {/* First slot: spans both rows, natural aspect ratio */}
+                  <div style={{ gridRow: "1 / 3", alignSelf: "center" }}>
+                    {row.slots[0]?.video && (
+                      <div style={{ aspectRatio: row.slots[0].aspectRatio ?? "9/16", overflow: "hidden" }}>
+                        <video
+                          src={`${base}${row.slots[0].video}`}
+                          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                          controls
+                          playsInline
+                          preload="metadata"
+                        />
+                      </div>
+                    )}
+                  </div>
+                  {/* Remaining slots fill the 2×2 right side */}
+                  {row.slots.slice(1).map((slot, i) => renderSlot(slot, i, base))}
                 </div>
-                {/* Remaining slots fill the 2×2 right side */}
-                {row.slots.slice(1).map((slot, i) => renderSlot(slot, i, base))}
               </div>
             ) : (
               <div
