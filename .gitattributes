@@ -38,3 +38,8 @@ attached_assets/Episode_3_V3_(Previously_Episode_4)_1784668118491.mp4 filter=lfs
 artifacts/clark-kent/public/apl-4.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/ANTICIPATION_1_-_POST_7_1784669689435.mp4 filter=lfs diff=lfs merge=lfs -text
 attached_assets/CURIOSITY_1_-_ELASTICITY_1_-_REEL_POST_6_1784669761840.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-5.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-6.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/clark-kent/public/apl-7.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/BREATHABILITY_-_CURIOSITY_-_REEL_POST_5_1784669821716.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/CURIOSITY_3_-_LOCK_DOWN_-_REEL_POST_5_1784669868772.mp4 filter=lfs diff=lfs merge=lfs -text
