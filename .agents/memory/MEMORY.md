@@ -1,0 +1,1 @@
+- [Portfolio copy and metric blocks](portfolio-copy-and-metric-blocks.md) — Preserve narrative copy unless asked; keep metric blocks balanced and vertically centered.
