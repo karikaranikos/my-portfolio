@@ -19,6 +19,11 @@ export interface SideSection {
   columns?: number;       // video columns on the right (default 2)
 }
 
+export interface ProjectStat {
+  value: string;
+  label: string;
+}
+
 export interface Project {
   id: number;
   slug: string;
@@ -27,6 +32,7 @@ export interface Project {
   cover?: string;    // optional custom cover for the detail page
   category: string;
   overview?: string; // case study body copy
+  stats?: ProjectStat[]; // highlights displayed beside the overview
   headerVideo?: string;              // optional full-width horizontal video above the media grid
   mediaGridColumns?: number;          // columns in the media grid (default 3)
   mediaGrid?: (MediaSlot | null)[];  // flat grid, null = placeholder
@@ -37,6 +43,10 @@ export interface Project {
 
 export const projects: Project[] = [
   { id: 1,  slug: "hampton",            title: "Hampton",             img: "WP1.png",  cover: "cover-hampton.png",            category: "",
+    stats: [
+      { value: "$3M+", label: "ARR of member founders" },
+      { value: "4 months", label: "Top-performing ad" },
+    ],
     overview: `<a href="https://joinhampton.com/about-us" target="_blank" rel="noopener noreferrer">Hampton</a> is a private community for founders doing $3M+ in ARR, founded by <a href="https://www.instagram.com/thesamparr/?hl=en" target="_blank" rel="noopener noreferrer">Sam Parr</a> and his partner <a href="https://www.linkedin.com/in/joespeiser/" target="_blank" rel="noopener noreferrer">Joe Speiser</a>. I served as co-creative strategist and copywriter, tasked with launching Hampton's presence on Instagram and building a library of paid creative behind the scenes. The challenge was establishing Sam's authority and presence online with no existing Instagram audience.\n\nOur approach was to build a tiered content system instead of a one-off campaign: a hero storytelling series centered around Sam & Joe's success to build emotional credibility, a second layer pulling educational lessons from Sam and Joe into bite-sized content, and a third layer of highly shareable content designed to travel through founders' networks. Rather than building around Sam alone, every series, topic, and visual style was designed to be repeatable and applicable across other members of the community — so the content system could scale across the entire Hampton ecosystem. The biggest win was <a href="https://www.instagram.com/reel/DSDAAspERrj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">Sam's hero piece</a> becoming their top performing ad for 4 months.`,
     mediaGrid: [
       { video: "hampton-hero.mp4",          aspectRatio: "9/16" },
@@ -46,6 +56,12 @@ export const projects: Project[] = [
     commentImages: ["hampton-comments-b.png", "hampton-comments-a.png"],
   },
   { id: 2,  slug: "malbon",             title: "Malbon",              img: "WP2.png",  cover: "cover-malbon.png",             category: "",
+    stats: [
+      { value: "7M", label: "Organic views" },
+      { value: "15K", label: "Followers in 5 days" },
+      { value: "300", label: "Pieces of content" },
+      { value: "1.3M", label: "Views on Letters From Augusta" },
+    ],
     headerVideo: "malbon-reel-1.mp4",
     mediaGridColumns: 4,
     mediaGrid: [
@@ -61,6 +77,12 @@ export const projects: Project[] = [
     overview: `I created and led the creative strategy, copywriting, and on-site production for the launch of <a href="https://www.instagram.com/malbonhome/" target="_blank" rel="noopener noreferrer">Malbon Home</a> at the 2026 Masters — Malbon's four-day activation in Augusta. Malbon's brand equity goal was to create an activation where everyone was welcome, in a space where brand activations historically are invite-only and exclusive.\n\nThe brief: grow to 10K followers in 4 days, shoot, edit + post in real time, without losing Malbon's premium positioning — while weaving in brand partners, celebrity guests, and everyday community members equally, all in service of their core narrative: "the green is the common ground."\n\nThat meant building a content strategy versatile enough to cover VIP guests like <a href="https://www.instagram.com/charley.hull/?hl=en" target="_blank" rel="noopener noreferrer">Charlie Hull</a>, <a href="https://www.instagram.com/dwyanewade/?hl=en" target="_blank" rel="noopener noreferrer">Dwyane Wade</a>, <a href="https://www.instagram.com/teamswish/?hl=en" target="_blank" rel="noopener noreferrer">J.R. Smith</a>, <a href="https://www.instagram.com/groovyq/?hl=en" target="_blank" rel="noopener noreferrer">Schoolboy Q</a>, and <a href="https://www.instagram.com/victorcruz/" target="_blank" rel="noopener noreferrer">Victor Cruz</a>, everyday community members walking through the door, and dedicated branded content for partners like Nespresso, LALO Tequila, Tito's, and Garage Beer.\n\nMy approach was to build the strategy around "sets": treating each space in the house as its own mini content series, then assigning a team member to each set to execute concepts on the spot. One set became our viral <a href="https://www.instagram.com/reels/DW624PsEfXy/" target="_blank" rel="noopener noreferrer">"Letters From Augusta"</a> series, where an Etsy payphone at the front door prompted guests to call whoever introduced them to golf — we shot 25 episodes in a single day and gained over 1.3M views.\n\nI led a team of 8, posting around 300 pieces of content over the activation, generating 7M organic views and growing the account from 0 to 15K followers in 5 days. The approach was later cited as a model by marketing newsletter <a href="https://www.linkinbio.news/p/your-campaign-needs-more-on-ramps" target="_blank" rel="noopener noreferrer">Link in Bio</a>, for building modern campaigns that work with non-chronological social algorithms.`,
   },
   { id: 3,  slug: "malbon-buckets-club",title: "Malbon Buckets Club", img: "WP3.png",  cover: "cover-malbon-buckets-club.png",category: "",
+    stats: [
+      { value: "4", label: "Tournaments" },
+      { value: "35+", label: "Pieces per event" },
+      { value: "8K", label: "New followers" },
+      { value: "1.8M+", label: "Views" },
+    ],
     mediaRows: [
       { columns: 3, slots: [
         { video: "buckets-road-ep1.mp4",       aspectRatio: "9/16" },
@@ -92,6 +114,10 @@ export const projects: Project[] = [
     overview: `I worked with AG1 to launch AGZ, their new nighttime sleep supplement, with an original social show designed to give the product its own creative identity from day one. I served as creative strategist and copywriter, developing a strategy centered on building a direct association between "the best night's sleep" and AGZ itself, letting the new product borrow credibility and reach from AG1's already loyal, thriving fanbase rather than starting from scratch.\n\nTo do this, we designed an aspirational travel-style series to live on AGZ's new account, spotlighting the best places in the world to get a great night's rest. Each episode focused on a scientific or educational angle, to position the account as an authority on rest itself.`,
   },
   { id: 5,  slug: "aje",                title: "Aje.",                img: "WP5.png",  cover: "cover-aje.png",                category: "",
+    stats: [
+      { value: "9-figure", label: "Legacy brand" },
+      { value: "3", label: "Fashion lines" },
+    ],
     overview: `Aje is a 9-figure legacy Australian fashion brand. They wanted to experiment with social shows to start layering in storytelling to their 3 fashion lines - Aje, their parent line for high-fashion event wear; Aje Athletica, their athletic lifestyle line; and Aje Studio, their elevated everyday wear line.\n\nI oversaw creative strategy and brand narrative positioning during the project. Each needed its own distinct content world, so we developed a separate original concept for each.`,
     sideSections: [
       {
@@ -124,6 +150,12 @@ export const projects: Project[] = [
     ],
   },
   { id: 7,  slug: "tyr",                title: "TYR",                 img: "WP7.png",  cover: "cover-tyr.png",                category: "",
+    stats: [
+      { value: "28 days", label: "Campaign" },
+      { value: "9", label: "Narrative chapters" },
+      { value: "~2M", label: "Organic views" },
+      { value: "~67K", label: "Organic engagements" },
+    ],
     mediaRows: [
       { columns: 5, slots: [
         { video: "tyr-5.mp4", aspectRatio: "9/16" },
@@ -154,6 +186,12 @@ export const projects: Project[] = [
     overview: `<a href="https://www.instagram.com/tyrsport/" target="_blank" rel="noopener noreferrer">TYR</a> is a nine-figure performance brand in the hybrid athlete niche. I worked as creative strategist with the creative director to oversee execution of the CXT-3 training shoe launch, and as sole copywriter.\n\nThe 28-day campaign ran across organic social, email, SMS, and in-store touchpoints, built around a central idea: the CXT-3 as a shoe built for repetition, discipline, and the unglamorous work behind any breakthrough. Content moved through nine narrative chapters, from "Make the Work Routine" through a closing hero film, featuring TYR athletes.\n\nThe campaign generated ~2M organic views and ~67K total organic engagements across the 28-day window.`,
   },
   { id: 9,  slug: "high-pour",          title: "High Pour",           img: "WP9.png",  cover: "cover-high-pour.png",          category: "",
+    stats: [
+      { value: "3 months", label: "Partnership" },
+      { value: "1M", label: "Views" },
+      { value: "30K", label: "Engagements" },
+      { value: "12K+", label: "New followers" },
+    ],
     overview: `<a href="https://www.instagram.com/highpour_/" target="_blank" rel="noopener noreferrer">High Pour</a> is a THC beverage brand entering a category with almost no established playbook — heavy platform restrictions, unclear content guidelines, and a product meant to replace a deeply ingrained behavior: drinking.\n\nI owned High Pour's social account end to end as creative strategist and copywriter over a three-month partnership, working with a production team to bring art direction, casting, and original recipes to life.\n\nThe brief was twofold: helping High Pour find a brand narrative that felt premium and intentional in a category still figuring out its own social norms, and creating content that could educate people on how to actually use a THC beverage without feeling like a tutorial.\n\nWe iterated multiple content series to find High Pour's content market fit, landing on a recurring series — "High Hour" — built around happy hour mocktails made with High Pour.\n\n"High Hour" became the account's clear winner and the primary driver of results. Over three months, High Pour gained 1M views, 30,000 engagements, and more than 12K new followers.`,
     mediaGridColumns: 3,
     mediaGrid: [
@@ -163,6 +201,10 @@ export const projects: Project[] = [
     ],
   },
   { id: 10, slug: "lady-bird-soda",     title: "Lady Bird Soda",      img: "WP10.png", cover: "cover-lady-bird-soda.png",     category: "",
+    stats: [
+      { value: "2 months", label: "Campaign period" },
+      { value: "7K", label: "New followers" },
+    ],
     overview: `<a href="https://www.instagram.com/ladybirdsoda/" target="_blank" rel="noopener noreferrer">Lady Bird Soda</a> came to us with a strong visual presence already in place but no brand narrative tying it together. A Texas brand selling both flavor-forward sodas and alcohol mixers, they wanted their heritage and storytelling to come through in a way that felt culturally relevant online, not just visually pleasing.\n\nContent also needed to work double duty — performing organically while being strong enough to repurpose as paid assets.\n\nI owned the account end to end as creative strategist and copywriter and worked with the production team to guide art direction and casting.\n\nWe iterated on multiple content series to find a brand narrative and content market fit that was product-forward without leaning too hard into education or sales.\n\nOur winner was "After Hours," a mocktail recipe series using both the sodas and mixers to build out drinks. Once After Hours started winning with the audience, we layered in monthly campaigns, including a Texas summer campaign and the launch of the Lady Bird Transfusion, both built around visual storytelling and skits that carried the brand's throughline further.\n\nOver two months, Lady Bird gained 7,000 followers, established a clear brand narrative and content market fit, and elevated its visual presence across feed.`,
     mediaRows: [
       { columns: 2, slots: [
@@ -185,6 +227,10 @@ export const projects: Project[] = [
     ],
   },
   { id: 11, slug: "craftd",             title: "CRAFTD",              img: "WP11.png", cover: "cover-craftd.png",             category: "",
+    stats: [
+      { value: "9-figure", label: "Men's jewelry brand" },
+      { value: "2", label: "Recurring shows" },
+    ],
     overview: `<a href="https://www.instagram.com/craftd/" target="_blank" rel="noopener noreferrer">CRAFTD</a> is a nine-figure men's jewelry brand that wanted to start layering storytelling into their social presence through original show formats rather than one-off content. I worked with the creative director to build the creative strategy and show concepts, owned copywriting for the series, and worked with the team to approve art direction and casting.\n\nWe developed two recurring shows. Waterside Wisdom follows an uncle and nephew who play chess together lakeside every week, using each game as a frame for the uncle to pass down life advice, treating chess and life as the same exercise in strategy. Poker Nights brings to life the kind of mythical, invite-only poker games between older successful entrepreneurs that people always hear about but never see, using the table as a setting for conversations about money, relationships, and the future.\n\nBoth shows were built around the same idea: older men who've earned the right to speak on life, using a shared ritual — chess or cards — as the vehicle for the brand's product and voice to live inside a story instead of an ad.`,
     mediaRows: [
       { label: "Waterside Wisdom", layout: "tall-left", columns: 3, slots: [
@@ -204,6 +250,11 @@ export const projects: Project[] = [
     ],
   },
   { id: 12, slug: "apl",                title: "APL",                 img: "WP12.png", cover: "cover-apl.png",                category: "",
+    stats: [
+      { value: "4", label: "Campaign phases" },
+      { value: "12", label: "Pieces of content" },
+      { value: "3", label: "Pieces per phase" },
+    ],
     overview: `For <a href="https://www.instagram.com/apl/" target="_blank" rel="noopener noreferrer">APL</a>'s launch of the VEIL, I served as co-creative strategist and social producer. Founders <a href="https://www.instagram.com/adamgoldston/?hl=en" target="_blank" rel="noopener noreferrer">Adam</a> and <a href="https://www.instagram.com/ryangoldston/?hl=en" target="_blank" rel="noopener noreferrer">Ryan Goldston</a> center every product line around a "simple, yet severe" branding philosophy, so the challenge was finding a way to tie the shoe's actual physical features — its performance, movement, and feel — into a visual world that felt both athletic and high fashion.\n\nWe created the campaign concept, "Nature is the World's Veil," tying the shoe's features back to the shoe's name and the way it moves with the body, similar to the way a veil moves within its environment: natural, elegant, ever-shifting. We used nature itself as the studio, integrating the VEIL into locations and elements to represent clean, effortless movement.\n\nThe goal was to position our talent not just as an athlete performing at the highest level, but as someone completely immersed in nature to signify how the shoe also completely immerses into the athletic experience by bending, forming, and molding to the athlete.\n\nThe campaign was built across 4 phases, each with 3 pieces of content, 12 pieces total, designed to unfold as a single, increasingly immersive visual world. Rather than standalone posts, each phase built on the last, so a viewer could move through APL's page and step further into the product's world with every piece they encountered.`,
     mediaRows: [
       { columns: 4, slots: [

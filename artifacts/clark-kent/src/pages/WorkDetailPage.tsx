@@ -86,8 +86,18 @@ export default function WorkDetailPage() {
       {/* Content — placeholder, ready to fill in */}
       <div className="work-detail-content">
         <div className="work-detail-intro">
-          <div className="work-detail-intro-left">
+          <div className={`work-detail-intro-left${project.stats?.length ? " work-detail-intro-left--stats" : ""}`}>
             <h2 className="work-detail-section-label">Overview</h2>
+            {project.stats && project.stats.length > 0 && (
+              <div className={`work-detail-stats work-detail-stats--${project.stats.length}`}>
+                {project.stats.map((stat, i) => (
+                  <div className="work-detail-stat" key={`${stat.value}-${i}`}>
+                    <strong className="work-detail-stat-value">{stat.value}</strong>
+                    <span className="work-detail-stat-label">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
           <div className="work-detail-intro-right">
             {project.overview ? (
